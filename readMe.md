@@ -19,7 +19,7 @@
 (Brandon) ESP Mac: 74:4D:BD:2E:08:24
 
 ## shared_components
-- shared sender and receiver functions, mac scrip to print the address of ESP (NEED FOR ESP NOW)
+- shared transmiter(controller esp sends message to car), receiver(car esp), and mac-reading scrips( prints the address of ESP {NEED FOR ESP }).
 
 ## How to add shared functions
 - if they're to be shared by both ESPs, put the `func.c` file in `/shared_components` and the corresponding `func.h` file in `/include`
