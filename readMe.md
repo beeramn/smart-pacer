@@ -1,3 +1,15 @@
+# How To Run 
+- you might want to set up ur environment variables (MAC) `. ~/esp/esp-idf/export.sh`
+- just like any other ESP project, cd into the main folder of either the esp for the car(receiver) or the controller (sender)
+- `idf.py build`
+- (MAC) Cmd + C: `ls /dev/cu.usb*` -> Output is the [PORT] 
+- `idf.py -p [PORT] flash` Flashes code
+- `idf.py -p [PORT] monitor` Monitor ESP output
+
+## Functionality
+- Right now the sender will keep sending 2 ints -> PACE = [Minute]:[Seconds], ever 5 seconds until it receives 100 OKs from the receiver.
+- The receiver (Car ESP) just listens
+
 ## car_esp
 - car esp script
 (Noiluh) ESP MAC: 24:EC:4A:52:C3:64
@@ -8,5 +20,10 @@
 
 ## shared_components
 - shared sender and receiver functions, mac scrip to print the address of ESP (NEED FOR ESP NOW)
+
+## How to add shared functions
+- if they're to be shared by both ESPs, put the `func.c` file in `/shared_components` and the corresponding `func.h` file in `/include`
+- add the `func.c` file to the `CMakeLists.txt` in `shared_components` along the other files
+- when using in ESP folders remmeber to add `#include` to the top of the file. EX: `#include "get_mac.h"` 
 
 
