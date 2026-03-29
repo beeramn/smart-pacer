@@ -7,8 +7,9 @@
 - `idf.py -p [PORT] monitor` Monitor ESP output
 
 ## Functionality
-- Right now the sender will keep sending 2 ints -> PACE = [Minute]:[Seconds], ever 5 seconds until it receives 100 OKs from the receiver.
-- The receiver (Car ESP) just listens
+- Right now when you have 2 ESPs connected and use the UO to set a pace and select [Start], it will send the selected pace to the receiver. 
+- The receiver (Car ESP) just listens and sends an OK acknowledgment to transmiter
+- once transmiter has receivev 3 of these, it stops sendings
 
 ## car_esp
 - car esp script
