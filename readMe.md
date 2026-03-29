@@ -27,3 +27,11 @@
 - when using in ESP folders remmeber to add `#include` to the top of the file. EX: `#include "get_mac.h"` 
 
 
+### transmiter.c 
+- has all the transmitting functions, At the moment will keep transmitting until it receives 3 OK messages from receiver
+
+### receiver.c
+- RIGHT NOW: Only listens for messages and sends OK back to transmiter when it gets something
+
+### ui.c
+- has (mostly) all the functions from flavi's original script. Used in cont_esp.c to create the interface and send pace to receiver

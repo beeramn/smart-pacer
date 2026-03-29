@@ -160,4 +160,16 @@
 /Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 /Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/esp-idf/json/libjson.a
 /Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/esp-idf/main/libmain.a
+/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/esp-idf/espressif__esp_lcd_ili9341/libespressif__esp_lcd_ili9341.a
+/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/esp-idf/esp_lcd/libesp_lcd.a
+/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/esp-idf/espressif__esp_lcd_touch/libespressif__esp_lcd_touch.a
+/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/esp-idf/espressif__esp_lcd_touch_gt911/libespressif__esp_lcd_touch_gt911.a
+/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/esp-idf/espressif__esp_lcd_touch/libespressif__esp_lcd_touch.a
+/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/esp-idf/lvgl__lvgl/liblvgl__lvgl.a
+/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/esp-idf/lvgl__lvgl/liblvgl__lvgl.a
+/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/esp-idf/espressif__esp_lvgl_port/liblvgl_port_lib.a
+/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/esp-idf/espressif__mpu6050/libespressif__mpu6050.a
 /Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/esp-idf/common_code/libcommon_code.a
+/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/esp-idf/espressif__esp_lcd_ili9341/libespressif__esp_lcd_ili9341.a
+/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/esp-idf/espressif__esp_lcd_touch_gt911/libespressif__esp_lcd_touch_gt911.a
+/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/esp-idf/espressif__mpu6050/libespressif__mpu6050.a

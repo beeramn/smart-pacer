@@ -1,0 +1,450 @@
+Command: /Users/brandon/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/brandon/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem101 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/cont_esp.elf /Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/cont_esp/build/bootloader/bootloader.elf -m '/Users/brandon/.espressif/python_env/idf5.5_py3.9_env/bin/python' '/Users/brandon/esp/esp-idf/tools/idf.py' '-p' '/dev/cu.usbmodem101'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037a0f2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (18) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (18) boot: compile time Mar 28 2026 16:54:01[0m
+[0;32mI (18) boot: Multicore bootloader[0m
+[0;32mI (18) boot: chip revision: v0.2[0m
+[0;32mI (21) boot: efuse block revision: v1.3[0m
+[0;32mI (24) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (28) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (32) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (40) boot: Partition Table:[0m
+[0;32mI (43) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (49) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (56) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (62) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (69) boot: End of partition table[0m
+[0;32mI (72) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=18ba4h (101284) map[0m
+[0;32mI (97) esp_image: segment 1: paddr=00028bcc vaddr=3fc9a700 size=04a14h ( 18964) load[0m
+[0;32mI (102) esp_image: segment 2: paddr=0002d5e8 vaddr=40374000 size=02a30h ( 10800) load[0m
+[0;32mI (104) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8093ch (526652) map[0m
+[0;32mI (201) esp_image: segment 4: paddr=000b0964 vaddr=40376a30 size=13c88h ( 81032) load[0m
+[0;32mI (219) esp_image: segment 5: paddr=000c45f4 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (229) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (229) boot: Disabling RNG early entropy source...[0m
+[0;32mI (239) cpu_start: Multicore app[0m
+[0;32mI (248) cpu_start: Pro cpu start user code[0m
+[0;32mI (248) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (248) app_init: Application information:[0m
+[0;32mI (248) app_init: Project name:     car_esp[0m
+[0;32mI (252) app_init: App version:      02f57c6-dirty[0m
+[0;32mI (256) app_init: Compile time:     Mar 28 2026 16:53:54[0m
+[0;32mI (261) app_init: ELF file SHA256:  9cc6f848c...[0m
+[0;32mI (266) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (269) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (273) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (277) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (281) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (287) heap_init: At 3FCA2DE8 len 00046928 (282 KiB): RAM[0m
+[0;32mI (293) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (303) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (309) spi_flash: detected chip: gd[0m
+[0;32mI (311) spi_flash: flash io: dio[0m
+[0;33mW (314) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (327) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (333) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (340) main_task: Started on CPU0[0m
+[0;32mI (350) main_task: Calling app_main()[0m
+ESP32-box3 MAC (WiFi STA): 24:EC:4A:52:C3:64
+[0;32mI (370) pp: pp rom version: e7ae62f[0m
+[0;32mI (370) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (380) wifi:wifi driver task: 3fceeb1c, prio:23, stack:6656, core=0[0m
+[0;32mI (390) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (390) wifi:wifi certification version: v7.0[0m
+[0;32mI (390) wifi:config NVS flash: enabled[0m
+[0;32mI (390) wifi:config nano formatting: disabled[0m
+[0;32mI (390) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (400) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (400) wifi:Init management short buffer num: 32[0m
+[0;32mI (400) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (410) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (410) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (420) wifi:Init static rx buffer num: 10[0m
+[0;32mI (420) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (430) wifi_init: rx ba win: 6[0m
+[0;32mI (430) wifi_init: accept mbox: 6[0m
+[0;32mI (430) wifi_init: tcpip mbox: 32[0m
+[0;32mI (430) wifi_init: udp mbox: 6[0m
+[0;32mI (440) wifi_init: tcp mbox: 6[0m
+[0;32mI (440) wifi_init: tcp tx win: 5760[0m
+[0;32mI (440) wifi_init: tcp rx win: 5760[0m
+[0;32mI (450) wifi_init: tcp mss: 1440[0m
+[0;32mI (450) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (450) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (460) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (500) wifi:mode : sta (24:ec:4a:52:c3:64)[0m
+[0;32mI (500) wifi:enable tsf[0m
+[0;32mI (510) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (510) RECEIVER: ESP-NOW receiver initialized on channel 1[0m
+[0;32mI (510) main_task: Returned from app_main()[0m
+RECEIVED: 6, 0
+[0;32mI (25200) RECEIVER: ACK sent[0m
+RECEIVED: 8, 15
+[0;32mI (47020) RECEIVER: ACK sent[0m
+RECEIVED: 8, 15
+[0;32mI (52520) RECEIVER: ACK sent[0m
+RECEIVED: 8, 15
+[0;32mI (58020) RECEIVER: ACK sent[0m
+RECEIVED: 8, 15
+[0;32mI (63520) RECEIVER: ACK sent[0m
+RECEIVED: 8, 15
+[0;32mI (69020) RECEIVER: ACK sent[0m
+RECEIVED: 8, 15
+[0;32mI (74520) RECEIVER: ACK sent[0m
+RECEIVED: 8, 15
+[0;32mI (80030) RECEIVER: ACK sent[0m
+RECEIVED: 6, 0
+[0;32mI (135270) RECEIVER: ACK sent[0m
+RECEIVED: 6, 0
+[0;32mI (140760) RECEIVER: ACK sent[0m
+RECEIVED: 6, 0
+[0;32mI (146260) RECEIVER: ACK sent[0m
+RECEIVED: 6, 0
+[0;32mI (151760) RECEIVER: ACK sent[0m
+RECEIVED: 6, 0
+[0;32mI (157260) RECEIVER: ACK sent[0m
+RECEIVED: 6, 0
+[0;32mI (162770) RECEIVER: ACK sent[0m
+RECEIVED: 6, 0
+[0;32mI (168260) RECEIVER: ACK sent[0m
+RECEIVED: 6, 0
+[0;32mI (173760) RECEIVER: ACK sent[0m
+RECEIVED: 6, 0
+[0;32mI (179260) RECEIVER: ACK sent[0m
+RECEIVED: 6, 0
+[0;32mI (184760) RECEIVER: ACK sent[0m
+RECEIVED: 6, 0
+[0;32mI (190260) RECEIVER: ACK sent[0m
+RECEIVED: 6, 0
+[0;32mI (195760) RECEIVER: ACK sent[0m
+RECEIVED: 6, 0
+[0;32mI (201270) RECEIVER: ACK sent[0m
+RECEIVED: 6, 0
+[0;32mI (206760) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (265540) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (271030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (276540) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (282030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (287530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (293030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (298530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (304030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (309530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (315040) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (320530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (326030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (331530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (337030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (342530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (348030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (353540) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (359040) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (364530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (370030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (375530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (381030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (386540) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (392040) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (397530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (403030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (408540) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (414030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (419530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (425040) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (430530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (436030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (441530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (447030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (452530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (458030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (463540) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (469030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (474530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (480030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (485530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (491030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (496530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (502030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (507530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (513030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (518530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (524030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (529530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (535030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (540530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (546030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (551540) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (557030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (562540) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (568030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (573530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (579030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (584530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (590030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (595530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (601040) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (606530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (612030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (617530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (623030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (628540) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (634030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (639540) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (645030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (650530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (656030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (661530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (667030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (672530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (678030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (683530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (689030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (694530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (700030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (705530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (711030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (716530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (722030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (727530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (733040) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (738540) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (744030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (749530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (755030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (760530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (766030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (771540) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (777030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (782530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (788030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (793530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (799030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (804530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (810040) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (815530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (821030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (826530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (832030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (837530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (843030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (848540) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (854030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (859530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (865030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (870530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (876030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (881530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (887030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (892530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (898030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (903530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (909040) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (914530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (920040) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (925530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (931030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (936530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (942030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (947530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (953030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (958530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (964030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (969530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (975030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (980540) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (986030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (991530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (997030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1002530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1008030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1013530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1019030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1024530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1030030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1035530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1041030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1046530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1052040) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1057540) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1063030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1068530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1074030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1079530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1085030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1090530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1096040) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1101530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1107030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1112530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1118030) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1123530) RECEIVER: ACK sent[0m
+RECEIVED: 8, 30
+[0;32mI (1129030) RECEIVER: ACK sent[0m
