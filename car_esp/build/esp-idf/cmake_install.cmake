@@ -569,6 +569,41 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/car_esp/build/esp-idf/espressif__cmake_utilities/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/car_esp/build/esp-idf/espressif__esp_lcd_ili9341/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/car_esp/build/esp-idf/espressif__esp_lcd_touch/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/car_esp/build/esp-idf/espressif__esp_lcd_touch_gt911/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/car_esp/build/esp-idf/lvgl__lvgl/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/car_esp/build/esp-idf/espressif__esp_lvgl_port/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/car_esp/build/esp-idf/espressif__mpu6050/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/car_esp/build/esp-idf/common_code/cmake_install.cmake")
 endif()
 
