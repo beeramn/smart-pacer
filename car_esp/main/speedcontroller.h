@@ -12,6 +12,9 @@
 #define SPEED_DISTANCE_PER_ENCODER_COUNT_M \
     (SPEED_WHEEL_CIRCUMFERENCE_M / (float)SPEED_ENCODER_COUNTS_PER_WHEEL_REV)
 
+/** Mile distance for pace conversion [m] */
+#define SPEED_MILE_DISTANCE_M (1609.344f)
+
 /**
  * Forward-only + BTS7960: PI output is 0…output_max (e.g. PWM duty fraction).
  * Hold one direction fixed (RPWM + enables, LPWM low — per your breakout’s forward table).
@@ -37,3 +40,12 @@ void speed_pi_init(speed_pi_t *pi, float kp, float ki, float output_max);
  */
 float speed_pi_update(speed_pi_t *pi, int32_t encoder_count, int64_t time_us,
                       float setpoint_m_s, float *measured_m_s_out);
+
+/**
+ * Convert a "mile pace" expressed as minutes:seconds (e.g. 8:30 per mile)
+ * into a linear speed setpoint in m/s.
+ *
+ * On your setup:
+ * - `cont_esp` sends `value1 = minutes` and `value2 = seconds`.
+ */
+float speed_m_s_from_mile_pace_min_sec(uint16_t minutes, uint16_t seconds);

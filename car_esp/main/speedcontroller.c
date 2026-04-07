@@ -1,6 +1,18 @@
 #include "speedcontroller.h"
 
 #include <math.h>
+/* call this in car_esp.c to get setpoint_ms like this: 
+float setpoint_m_s = speed_m_s_from_mile_pace_min_sec(msg.value1, msg.value2);*/
+float speed_m_s_from_mile_pace_min_sec(uint16_t minutes, uint16_t seconds)
+{
+    float total_s = (float)minutes * 60.0f + (float)seconds;
+    if (total_s <= 0.0f) {
+        return 0.0f;
+    }
+
+    /* speed = distance / time */
+    return SPEED_MILE_DISTANCE_M / total_s;
+}
 
 void speed_pi_init(speed_pi_t *pi, float kp, float ki, float output_max)
 {
