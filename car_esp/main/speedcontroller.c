@@ -27,6 +27,7 @@ float speed_pi_update(speed_pi_t *pi, int32_t encoder_count, int64_t time_us,
         *measured_m_s_out = 0.0f;
     }
 
+    /* First sample: initialize controller */
     if (!pi->initialized) {
         pi->prev_encoder_count = encoder_count;
         pi->prev_time_us = time_us;
@@ -35,6 +36,7 @@ float speed_pi_update(speed_pi_t *pi, int32_t encoder_count, int64_t time_us,
     }
 
     int64_t dt_us = time_us - pi->prev_time_us;
+    /* Equal timestamp: proportional-only guess */
     if (dt_us <= 0) {
         float p = pi->kp * setpoint_m_s;
         if (p > pi->output_max) {
@@ -43,10 +45,12 @@ float speed_pi_update(speed_pi_t *pi, int32_t encoder_count, int64_t time_us,
         return p;
     }
 
+    /* Calculate speed from count delta since last call. */
     int32_t delta_counts = encoder_count - pi->prev_encoder_count;
     float delta_m = (float)delta_counts * SPEED_DISTANCE_PER_ENCODER_COUNT_M;
     float dt_s = (float)dt_us * 1e-6f;
     float measured_m_s = delta_m / dt_s;
+    /* Forward-only: negative delta → treat speed as 0 for the loop. */
     if (measured_m_s < 0.0f) {
         measured_m_s = 0.0f;
     }
@@ -59,6 +63,7 @@ float speed_pi_update(speed_pi_t *pi, int32_t encoder_count, int64_t time_us,
     pi->integral += error * dt_s;
     float output = pi->kp * error + pi->ki * pi->integral;
 
+    /* Clamp and anti-windup */
     if (output > pi->output_max) {
         output = pi->output_max;
         if (pi->ki > 0.0f && error > 0.0f) {

@@ -3,11 +3,14 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#define SPEED_WHEEL_DIAMETER_M      (0.115f)
+#define SPEED_WHEEL_DIAMETER_M (0.115f)
 /** One revolution: π * D [m] */
 #define SPEED_WHEEL_CIRCUMFERENCE_M (3.14159265358979323846f * SPEED_WHEEL_DIAMETER_M)
-/** Encoder: 1 count per wheel revolution → distance per count equals one circumference [m] */
-#define SPEED_DISTANCE_PER_ENCODER_COUNT_M SPEED_WHEEL_CIRCUMFERENCE_M
+/** Magnetic wheel: 4 N + 4 S poles → 8 encoder counts per wheel revolution */
+#define SPEED_ENCODER_COUNTS_PER_WHEEL_REV 8
+/** Distance traveled for one encoder count [m] */
+#define SPEED_DISTANCE_PER_ENCODER_COUNT_M \
+    (SPEED_WHEEL_CIRCUMFERENCE_M / (float)SPEED_ENCODER_COUNTS_PER_WHEEL_REV)
 
 /**
  * Forward-only + BTS7960: PI output is 0…output_max (e.g. PWM duty fraction).
