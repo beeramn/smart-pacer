@@ -1,2 +1,2 @@
-source /Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/car_esp/build/bootloader/gdbinit/symbols
-source /Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/car_esp/build/bootloader/gdbinit/connect
+source /Users/flavikeller/Desktop/smart-pacer/car_esp/build/bootloader/gdbinit/symbols
+source /Users/flavikeller/Desktop/smart-pacer/car_esp/build/bootloader/gdbinit/connect

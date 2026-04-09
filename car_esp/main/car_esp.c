@@ -15,84 +15,86 @@
 
 // }
 
-
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/ledc.h"
+#include "driver/gpio.h"
 #include "esp_err.h"
+#include "esp_log.h"
+#include "esp_timer.h"
+#include "receiver.h"
+#include "speedcontroller.h"
 
-#define SERVO_GPIO         13
-#define LEDC_TIMER         LEDC_TIMER_0
-#define LEDC_MODE          LEDC_LOW_SPEED_MODE
-#define LEDC_CHANNEL       LEDC_CHANNEL_0
-#define PWM_FREQ_HZ        50
-#define PWM_RESOLUTION     LEDC_TIMER_14_BIT
-#define DUTY_MAX           ((1 << 14) - 1)
+static const char *TAG = "CAR";
 
-static uint32_t us_to_duty(uint32_t pulse_us)
-{
-    const uint32_t period_us = 20000; // 20 ms -> 50 Hz
-    return (pulse_us * DUTY_MAX) / period_us;
+// Encoder pulse input (one wire). Counts rising edges.
+#define ENCODER_GPIO 10
+
+// interupt for encouder sum count
+static volatile int32_t s_encoder_count;
+static void IRAM_ATTR encoder_isr(void *arg){
+    (void)arg;
+    s_encoder_count++;
 }
 
-static void set_pulse_us(uint32_t pulse_us)
-{
-    uint32_t duty = us_to_duty(pulse_us);
-    ESP_ERROR_CHECK(ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, duty));
-    ESP_ERROR_CHECK(ledc_update_duty(LEDC_MODE, LEDC_CHANNEL));
-}
-
-static void sweep_servo(uint32_t start_us, uint32_t end_us, uint32_t step_us, uint32_t delay_ms)
-{
-    if (start_us < end_us) {
-        for (uint32_t p = start_us; p <= end_us; p += step_us) {
-            set_pulse_us(p);
-            vTaskDelay(pdMS_TO_TICKS(delay_ms));
-        }
-    } else {
-        for (int p = (int)start_us; p >= (int)end_us; p -= (int)step_us) {
-            set_pulse_us((uint32_t)p);
-            vTaskDelay(pdMS_TO_TICKS(delay_ms));
-        }
-    }
-}
-
-void app_main(void)
-{
-    ledc_timer_config_t timer_conf = {
-        .speed_mode = LEDC_MODE,
-        .timer_num = LEDC_TIMER,
-        .duty_resolution = PWM_RESOLUTION,
-        .freq_hz = PWM_FREQ_HZ,
-        .clk_cfg = LEDC_AUTO_CLK
+// init encoder gpio
+static void encoder_gpio_init(void){
+    // changed to pull-up disable for testing CHANGE to enable for actual
+    gpio_config_t io = {
+        .pin_bit_mask = 1ULL << ENCODER_GPIO,
+        .mode = GPIO_MODE_INPUT,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .intr_type = GPIO_INTR_POSEDGE,
     };
-    ESP_ERROR_CHECK(ledc_timer_config(&timer_conf));
+    ESP_ERROR_CHECK(gpio_config(&io));
+    ESP_ERROR_CHECK(gpio_install_isr_service(0));
+    ESP_ERROR_CHECK(gpio_isr_handler_add(ENCODER_GPIO, encoder_isr, NULL));
+}
 
-    ledc_channel_config_t ch_conf = {
-        .gpio_num = SERVO_GPIO,
-        .speed_mode = LEDC_MODE,
-        .channel = LEDC_CHANNEL,
-        .timer_sel = LEDC_TIMER,
-        .duty = 0,
-        .hpoint = 0
-    };
-    ESP_ERROR_CHECK(ledc_channel_config(&ch_conf));
+void app_main(void){
+    esp_log_level_set("*", ESP_LOG_INFO);
+    // turn on receiver
+    espnow_receiver_init(1);
+    // initialize encoder gpio 
+    encoder_gpio_init();
 
-    vTaskDelay(pdMS_TO_TICKS(1000));
+    // init the PI
+    static speed_pi_t s_pi;
+    const float output_max = 1.0f;
 
-    // Start centered
-    set_pulse_us(1500);
-    vTaskDelay(pdMS_TO_TICKS(1000));
+    //start Ki small, raise Kp until response is stable.
+    speed_pi_init(&s_pi, 0.5f, 0.05f, output_max);
 
+    const TickType_t period = pdMS_TO_TICKS(100);
+    
+    // reset encoder count
+    s_encoder_count = 0;
+    // PI LOOP
     while (1) {
-        sweep_servo(1500, 1000, 5, 20);
-        vTaskDelay(pdMS_TO_TICKS(300));
+        float setpoint_m_s = 0.0f;
+        int min = 0;
+        int sec = 0;
+        if (receiver_get_latest_pace(&min, &sec)) {
+            // convert min and sec to meters/sec
+            setpoint_m_s = speed_m_s_from_mile_pace_min_sec((uint16_t)min, (uint16_t)sec);
+        }
 
-        sweep_servo(1000, 2000, 5, 20);
-        vTaskDelay(pdMS_TO_TICKS(300));
+        int32_t enc = s_encoder_count;
+        int64_t t_us = esp_timer_get_time();
+        float measured_m_s = 0.0f;
+        // Return value = PI output to motor (0 … output_max(1)). 
+        float pi_out = speed_pi_update(&s_pi, enc, t_us, setpoint_m_s, &measured_m_s);
 
-        sweep_servo(2000, 1500, 5, 20);
-        vTaskDelay(pdMS_TO_TICKS(300));
+        static int64_t last_log_us = 0;
+        const int64_t log_period_us = 1000000; // log every 1 second
+        if (t_us - last_log_us >= log_period_us) {
+            last_log_us = t_us;
+            ESP_LOGI(TAG,
+                     "speed_pi_update out=%.4f | setpoint=%.3f m/s | meas=%.3f m/s | enc=%ld",
+                     (double)pi_out, (double)setpoint_m_s, (double)measured_m_s, (long)enc);
+        }
+        vTaskDelay(period);
     }
 }

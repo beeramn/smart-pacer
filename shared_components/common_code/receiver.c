@@ -11,10 +11,16 @@
 #include "esp_event.h"
 #include "esp_wifi.h"
 #include "esp_now.h"
+#include <stdbool.h>
 
 static const char *TAG = "RECEIVER";
 
 static uint8_t s_wifi_channel = 1;
+
+// variables for saving pace
+static volatile int s_latest_min = 0;
+static volatile int s_latest_sec = 0;
+static volatile bool s_have_new_pace = false;
 
 typedef struct __attribute__((packed)) {
     int value1;
@@ -29,6 +35,11 @@ static void espnow_recv_cb(const esp_now_recv_info_t *recv_info,
     if (len == sizeof(espnow_int_msg_t)) {
         espnow_int_msg_t msg;
         memcpy(&msg, data, sizeof(msg));
+        
+        // saving the values for car_esp.c
+        s_latest_min = msg.value1;
+        s_latest_sec = msg.value2;
+        s_have_new_pace = true;
 
         printf("RECEIVED: %d, %d\n", msg.value1, msg.value2);
 
@@ -94,4 +105,18 @@ void espnow_receiver_init(uint8_t wifi_channel)
     ESP_ERROR_CHECK(esp_now_register_recv_cb(espnow_recv_cb));
 
     ESP_LOGI(TAG, "ESP-NOW receiver initialized on channel %d", wifi_channel);
+}
+// function for saving pace in car_esp
+bool receiver_get_latest_pace(int *min_out, int *sec_out){
+    if (!min_out || !sec_out) {
+        return false;
+    }
+
+    if (!s_have_new_pace) {
+        return false;
+    }
+
+    *min_out = s_latest_min;
+    *sec_out = s_latest_sec;
+    return true;
 }

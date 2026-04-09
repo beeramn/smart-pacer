@@ -1,4 +1,4 @@
-/* * Data converted from /Users/brandon/Duke/s26/ECE-COMPSCI-655/FINAL-PROJ/smart-pacer/car_esp/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /Users/flavikeller/Desktop/smart-pacer/car_esp/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)
