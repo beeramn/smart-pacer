@@ -2,7 +2,7 @@ Command: /Users/flavikeller/.espressif/python_env/idf5.5_py3.9_env/bin/python /U
 ESP-ROM:esp32s3-20210327
 Build:Mar 27 2021
 rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
-Saved PC:0x400490cc
+Saved PC:0x400490e9
 SPIWP:0xee
 mode:DIO, clock div:1
 load:0x3fce2820,len:0x159c
@@ -10,7 +10,7 @@ load:0x403c8700,len:0xd24
 load:0x403cb700,len:0x2f48
 entry 0x403c8924
 [0;32mI (18) boot: ESP-IDF v5.5 2nd stage bootloader[0m
-[0;32mI (18) boot: compile time Apr  8 2026 22:11:49[0m
+[0;32mI (18) boot: compile time Apr  9 2026 14:41:18[0m
 [0;32mI (18) boot: Multicore bootloader[0m
 [0;32mI (18) boot: chip revision: v0.2[0m
 [0;32mI (21) boot: efuse block revision: v1.3[0m
@@ -27,8 +27,8 @@ entry 0x403c8924
 [0;32mI (72) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=18f84h (102276) map[0m
 [0;32mI (97) esp_image: segment 1: paddr=00028fac vaddr=3fc9a900 size=04a24h ( 18980) load[0m
 [0;32mI (102) esp_image: segment 2: paddr=0002d9d8 vaddr=40374000 size=02640h (  9792) load[0m
-[0;32mI (104) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=81c7ch (531580) map[0m
-[0;32mI (202) esp_image: segment 4: paddr=000b1ca4 vaddr=40376640 size=141dch ( 82396) load[0m
-[0;32mI (221) esp_image: segment 5: paddr=000c5e88 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (104) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=81d24h (531748) map[0m
+[0;32mI (202) esp_image: segment 4: paddr=000b1d4c vaddr=40376640 size=141dch ( 82396) load[0m
+[0;32mI (221) esp_image: segment 5: paddr=000c5f30 vaddr=600fe000 size=00020h (    32) load[0m
 [0;32mI (230) boot: Loaded app from partition at offset 0x10000[0m
 [0;32mI (230) boot: Disabling RNG early entropy source...[0m

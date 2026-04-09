@@ -1,8 +1,8 @@
 Command: /Users/flavikeller/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/flavikeller/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem101 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/flavikeller/Desktop/smart-pacer/cont_esp/build/cont_esp.elf /Users/flavikeller/Desktop/smart-pacer/cont_esp/build/bootloader/bootloader.elf -m '/Users/flavikeller/.espressif/python_env/idf5.5_py3.9_env/bin/python' '/Users/flavikeller/esp/esp-idf/tools/idf.py'
 ESP-ROM:esp32s3-20210327
 Build:Mar 27 2021
-rst:0x15 (USB_UART_CHIP_RESET),boot:0x2a (SPI_FAST_FLASH_BOOT)
-Saved PC:0x400490d5
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2b (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048d46
 SPIWP:0xee
 mode:DIO, clock div:1
 load:0x3fce2820,len:0x159c
@@ -35,7 +35,7 @@ entry 0x403c8924
 [0;32mI (303) cpu_start: Multicore app[0m
 [0;32mI (312) cpu_start: Pro cpu start user code[0m
 [0;32mI (312) cpu_start: cpu freq: 160000000 Hz[0m
-[0;32mI (313) app_init: Application information:[0m
+[0;32mI (312) app_init: Application information:[0m
 [0;32mI (313) app_init: Project name:     cont_esp[0m
 [0;32mI (316) app_init: App version:      3321048-dirty[0m
 [0;32mI (321) app_init: Compile time:     Apr  8 2026 21:50:09[0m
@@ -59,7 +59,7 @@ entry 0x403c8924
 [0;32mI (424) main_task: Calling app_main()[0m
 [0;32mI (444) pp: pp rom version: e7ae62f[0m
 [0;32mI (444) net80211: net80211 rom version: e7ae62f[0m
-[0;32mI (454) wifi:wifi driver task: 3fceeb88, prio:23, stack:6656, core=0[0m
+[0;32mI (454) wifi:wifi driver task: 3fceeb04, prio:23, stack:6656, core=0[0m
 [0;32mI (464) wifi:wifi firmware version: f3dbad7[0m
 [0;32mI (464) wifi:wifi certification version: v7.0[0m
 [0;32mI (464) wifi:config NVS flash: enabled[0m
@@ -83,26 +83,27 @@ entry 0x403c8924
 [0;32mI (524) wifi_init: WiFi IRAM OP enabled[0m
 [0;32mI (524) wifi_init: WiFi RX IRAM OP enabled[0m
 [0;32mI (534) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
-[0;32mI (574) wifi:mode : sta (7c:2c:67:9a:56:48)[0m
-[0;32mI (574) wifi:enable tsf[0m
-[0;32mI (574) TRANSMIT: Wi-Fi STA started[0m
-[0;32mI (574) ESPNOW: espnow [version: 2.0] init[0m
-[0;32mI (574) TRANSMIT: ESP-NOW transmit initialized on channel 1[0m
-[0;32mI (574) PACE_UI: Turn off LCD backlight[0m
-[0;32mI (584) PACE_UI: Initialize SPI bus[0m
-[0;32mI (584) PACE_UI: Install panel IO[0m
-[0;32mI (594) PACE_UI: Install ILI9341 panel driver[0m
-[0;32mI (594) ili9341: LCD panel create success, version: 1.2.0[0m
-[0;32mI (714) PACE_UI: Turn on LCD backlight[0m
-[0;32mI (714) PACE_UI: Initialize LVGL[0m
-[0;32mI (714) LVGL: Starting LVGL task[0m
-[0;32mI (754) PACE_UI: Initializing touch[0m
-[0;32mI (754) PACE_UI: GT911 found at 0x14[0m
-[0;32mI (814) GT911: I2C address initialization procedure skipped - using default GT9xx setup[0m
-[1;31mE (814) lcd_panel.io.i2c: panel_io_i2c_rx_buffer(140): i2c transaction failed[0m
-[1;31mE (814) GT911: touch_gt911_read_cfg(419): GT911 read error![0m
-[1;31mE (814) GT911: esp_lcd_touch_new_i2c_gt911(169): GT911 init failed[0m
-[1;31mE (824) GT911: Error (0xffffffff)! Touch controller GT911 initialization failed![0m
+[0;32mI (574) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (624) wifi:mode : sta (7c:2c:67:9a:56:48)[0m
+[0;32mI (624) wifi:enable tsf[0m
+[0;32mI (624) TRANSMIT: Wi-Fi STA started[0m
+[0;32mI (634) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (634) TRANSMIT: ESP-NOW transmit initialized on channel 1[0m
+[0;32mI (634) PACE_UI: Turn off LCD backlight[0m
+[0;32mI (634) PACE_UI: Initialize SPI bus[0m
+[0;32mI (644) PACE_UI: Install panel IO[0m
+[0;32mI (644) PACE_UI: Install ILI9341 panel driver[0m
+[0;32mI (644) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (774) PACE_UI: Turn on LCD backlight[0m
+[0;32mI (774) PACE_UI: Initialize LVGL[0m
+[0;32mI (774) LVGL: Starting LVGL task[0m
+[0;32mI (814) PACE_UI: Initializing touch[0m
+[0;32mI (814) PACE_UI: GT911 found at 0x14[0m
+[0;32mI (874) GT911: I2C address initialization procedure skipped - using default GT9xx setup[0m
+[1;31mE (874) lcd_panel.io.i2c: panel_io_i2c_rx_buffer(140): i2c transaction failed[0m
+[1;31mE (874) GT911: touch_gt911_read_cfg(419): GT911 read error![0m
+[1;31mE (874) GT911: esp_lcd_touch_new_i2c_gt911(169): GT911 init failed[0m
+[1;31mE (884) GT911: Error (0xffffffff)! Touch controller GT911 initialization failed![0m
 ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x42049513
 file: "/Users/flavikeller/Desktop/smart-pacer/shared_components/common_code/ui.c" line 236
 func: ui_touch_init
@@ -121,7 +122,7 @@ ELF file SHA256: dc43c4ca6
 Rebooting...
 ESP-ROM:esp32s3-20210327
 Build:Mar 27 2021
-rst:0xc (RTC_SW_CPU_RST),boot:0x2a (SPI_FAST_FLASH_BOOT)
+rst:0xc (RTC_SW_CPU_RST),boot:0x2b (SPI_FAST_FLASH_BOOT)
 Saved PC:0x40375d70
 SPIWP:0xee
 mode:DIO, clock div:1
@@ -208,129 +209,73 @@ entry 0x403c8924
 [0;32mI (574) TRANSMIT: Wi-Fi STA started[0m
 [0;32mI (574) ESPNOW: espnow [version: 2.0] init[0m
 [0;32mI (574) TRANSMIT: ESP-NOW transmit initialized on channel 1[0m
-[0;32mI (574) PACE_UI: Turn off LCD backlight[0m
+[0;32mI (584) PACE_UI: Turn off LCD backlight[0m
 [0;32mI (584) PACE_UI: Initialize SPI bus[0m
 [0;32mI (584) PACE_UI: Install panel IO[0m
-[0;32mI (584) PACE_UI: Install ILI9341 panel driver[0m
+[0;32mI (594) PACE_UI: Install ILI9341 panel driver[0m
 [0;32mI (594) ili9341: LCD panel create success, version: 1.2.0[0m
-[0;32mI (714) PACE_UI: Turn on LCD backlight[0m
-[0;32mI (714) PACE_UI: Initialize LVGL[0m
-[0;32mI (714) LVGL: Starting LVGL task[0m
-[0;32mI (754) PACE_UI: Initializing touch[0m
-[0;32mI (754) PACE_UI: GT911 found at 0x5D[0m
-[0;32mI (814) GT911: I2C address initialization procedure skipped - using default GT9xx setup[0m
-[0;32mI (814) GT911: TouchPad_ID:0x39,0x31,0x31[0m
-[0;32mI (814) GT911: TouchPad_Config_Version:65[0m
-[0;32mI (814) PACE_UI: Touch registered with LVGL[0m
-[0;32mI (904) MAIN: System ready[0m
-[0;32mI (6034) MAIN: Start pressed with pace 12:30[0m
-[0;32mI (6034) TRANSMIT: Sent ints: 12, 30 (ACKs: 0/3)[0m
+[0;32mI (724) PACE_UI: Turn on LCD backlight[0m
+[0;32mI (724) PACE_UI: Initialize LVGL[0m
+[0;32mI (724) LVGL: Starting LVGL task[0m
+[0;32mI (764) PACE_UI: Initializing touch[0m
+[0;32mI (764) PACE_UI: GT911 found at 0x5D[0m
+[0;32mI (824) GT911: I2C address initialization procedure skipped - using default GT9xx setup[0m
+[0;32mI (824) GT911: TouchPad_ID:0x39,0x31,0x31[0m
+[0;32mI (824) GT911: TouchPad_Config_Version:65[0m
+[0;32mI (824) PACE_UI: Touch registered with LVGL[0m
+[0;32mI (914) MAIN: System ready[0m
+[0;32mI (214894) MAIN: Start pressed with pace 9:00[0m
+[0;32mI (214894) TRANSMIT: Sent ints: 9, 0 (ACKs: 0/3)[0m
 ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
 ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (6084) TRANSMIT: ACK received (1/3)[0m
-[0;32mI (11084) TRANSMIT: Sent ints: 12, 30 (ACKs: 1/3)[0m
+[0;32mI (214944) TRANSMIT: ACK received (1/3)[0m
+[0;32mI (219944) TRANSMIT: Sent ints: 9, 0 (ACKs: 1/3)[0m
 ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
 ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (11134) TRANSMIT: ACK received (2/3)[0m
-[0;32mI (16134) TRANSMIT: Sent ints: 12, 30 (ACKs: 2/3)[0m
+[0;32mI (219994) TRANSMIT: ACK received (2/3)[0m
+[0;32mI (224994) TRANSMIT: Sent ints: 9, 0 (ACKs: 2/3)[0m
 ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
 ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (16184) TRANSMIT: ACK received (3/3)[0m
-[0;32mI (21184) TRANSMIT: Finished transmit loop[0m
-[0;32mI (21184) TRANSMIT: Finished: received 100 ACKs[0m
-[0;32mI (1696894) MAIN: Start pressed with pace 12:30[0m
-[0;33mW (1696894) ESPNOW: Peer exists. Please call API esp_now_mod_peer()![0m
-[0;32mI (1696894) TRANSMIT: Sent ints: 12, 30 (ACKs: 0/3)[0m
+[0;32mI (225044) TRANSMIT: ACK received (3/3)[0m
+[0;32mI (230044) TRANSMIT: Finished transmit loop[0m
+[0;32mI (230044) TRANSMIT: Finished: received 100 ACKs[0m
+[0;32mI (739114) MAIN: Start pressed with pace 12:00[0m
+[0;33mW (739114) ESPNOW: Peer exists. Please call API esp_now_mod_peer()![0m
+[0;32mI (739114) TRANSMIT: Sent ints: 12, 0 (ACKs: 0/3)[0m
 ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
 ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (1696904) TRANSMIT: ACK received (1/3)[0m
-[0;32mI (1701904) TRANSMIT: Sent ints: 12, 30 (ACKs: 1/3)[0m
+[0;32mI (739124) TRANSMIT: ACK received (1/3)[0m
+[0;32mI (744124) TRANSMIT: Sent ints: 12, 0 (ACKs: 1/3)[0m
 ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
 ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (1701954) TRANSMIT: ACK received (2/3)[0m
-[0;32mI (1706954) TRANSMIT: Sent ints: 12, 30 (ACKs: 2/3)[0m
+[0;32mI (744174) TRANSMIT: ACK received (2/3)[0m
+[0;32mI (749174) TRANSMIT: Sent ints: 12, 0 (ACKs: 2/3)[0m
 ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
 ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (1707004) TRANSMIT: ACK received (3/3)[0m
-[0;32mI (1712004) TRANSMIT: Finished transmit loop[0m
-[0;32mI (1712004) TRANSMIT: Finished: received 100 ACKs[0m
-[0;32mI (1890544) MAIN: Start pressed with pace 10:30[0m
-[0;33mW (1890544) ESPNOW: Peer exists. Please call API esp_now_mod_peer()![0m
-[0;32mI (1890544) TRANSMIT: Sent ints: 10, 30 (ACKs: 0/3)[0m
+[0;32mI (749224) TRANSMIT: ACK received (3/3)[0m
+[0;32mI (754224) TRANSMIT: Finished transmit loop[0m
+[0;32mI (754224) TRANSMIT: Finished: received 100 ACKs[0m
+[0;32mI (961514) MAIN: Start pressed with pace 10:00[0m
+[0;33mW (961514) ESPNOW: Peer exists. Please call API esp_now_mod_peer()![0m
+[0;32mI (961514) TRANSMIT: Sent ints: 10, 0 (ACKs: 0/3)[0m
 ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
 ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (1890554) TRANSMIT: ACK received (1/3)[0m
-[0;32mI (1895554) TRANSMIT: Sent ints: 10, 30 (ACKs: 1/3)[0m
+[0;32mI (961524) TRANSMIT: ACK received (1/3)[0m
+[0;32mI (966524) TRANSMIT: Sent ints: 10, 0 (ACKs: 1/3)[0m
 ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
 ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (1895604) TRANSMIT: ACK received (2/3)[0m
-[0;32mI (1900604) TRANSMIT: Sent ints: 10, 30 (ACKs: 2/3)[0m
+[0;32mI (966574) TRANSMIT: ACK received (2/3)[0m
+[0;32mI (971574) TRANSMIT: Sent ints: 10, 0 (ACKs: 2/3)[0m
 ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
 ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (1900654) TRANSMIT: ACK received (3/3)[0m
-[0;32mI (1905654) TRANSMIT: Finished transmit loop[0m
-[0;32mI (1905654) TRANSMIT: Finished: received 100 ACKs[0m
-[0;32mI (2711584) MAIN: Start pressed with pace 10:30[0m
-[0;33mW (2711584) ESPNOW: Peer exists. Please call API esp_now_mod_peer()![0m
-[0;32mI (2711584) TRANSMIT: Sent ints: 10, 30 (ACKs: 0/3)[0m
+[0;32mI (971624) TRANSMIT: ACK received (3/3)[0m
+[0;32mI (976624) TRANSMIT: Finished transmit loop[0m
+[0;32mI (976624) TRANSMIT: Finished: received 100 ACKs[0m
+[0;32mI (998654) MAIN: Start pressed with pace 10:00[0m
+[0;33mW (998654) ESPNOW: Peer exists. Please call API esp_now_mod_peer()![0m
+[0;32mI (998654) TRANSMIT: Sent ints: 10, 0 (ACKs: 0/3)[0m
 ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
 ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (2711594) TRANSMIT: ACK received (1/3)[0m
-[0;32mI (2716594) TRANSMIT: Sent ints: 10, 30 (ACKs: 1/3)[0m
-ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
-ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (2716644) TRANSMIT: ACK received (2/3)[0m
-[0;32mI (2721644) TRANSMIT: Sent ints: 10, 30 (ACKs: 2/3)[0m
-ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
-ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (2721694) TRANSMIT: ACK received (3/3)[0m
-[0;32mI (2726694) TRANSMIT: Finished transmit loop[0m
-[0;32mI (2726694) TRANSMIT: Finished: received 100 ACKs[0m
-[0;32mI (2960464) MAIN: Start pressed with pace 11:30[0m
-[0;33mW (2960464) ESPNOW: Peer exists. Please call API esp_now_mod_peer()![0m
-[0;32mI (2960464) TRANSMIT: Sent ints: 11, 30 (ACKs: 0/3)[0m
-ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
-ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (2960474) TRANSMIT: ACK received (1/3)[0m
-[0;32mI (2965474) TRANSMIT: Sent ints: 11, 30 (ACKs: 1/3)[0m
-ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
-ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (2965524) TRANSMIT: ACK received (2/3)[0m
-[0;32mI (2970524) TRANSMIT: Sent ints: 11, 30 (ACKs: 2/3)[0m
-ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
-ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (2970574) TRANSMIT: ACK received (3/3)[0m
-[0;32mI (2975574) TRANSMIT: Finished transmit loop[0m
-[0;32mI (2975574) TRANSMIT: Finished: received 100 ACKs[0m
-[0;32mI (3150254) MAIN: Start pressed with pace 8:30[0m
-[0;33mW (3150254) ESPNOW: Peer exists. Please call API esp_now_mod_peer()![0m
-[0;32mI (3150254) TRANSMIT: Sent ints: 8, 30 (ACKs: 0/3)[0m
-ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
-ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (3150264) TRANSMIT: ACK received (1/3)[0m
-[0;32mI (3155264) TRANSMIT: Sent ints: 8, 30 (ACKs: 1/3)[0m
-ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
-ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (3155314) TRANSMIT: ACK received (2/3)[0m
-[0;32mI (3160314) TRANSMIT: Sent ints: 8, 30 (ACKs: 2/3)[0m
-ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
-ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (3160364) TRANSMIT: ACK received (3/3)[0m
-[0;32mI (3165364) TRANSMIT: Finished transmit loop[0m
-[0;32mI (3165364) TRANSMIT: Finished: received 100 ACKs[0m
-[0;32mI (3532664) MAIN: Start pressed with pace 9:30[0m
-[0;33mW (3532664) ESPNOW: Peer exists. Please call API esp_now_mod_peer()![0m
-[0;32mI (3532664) TRANSMIT: Sent ints: 9, 30 (ACKs: 0/3)[0m
-ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
-ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (3532674) TRANSMIT: ACK received (1/3)[0m
-[0;32mI (3537674) TRANSMIT: Sent ints: 9, 30 (ACKs: 1/3)[0m
-ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
-ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (3537724) TRANSMIT: ACK received (2/3)[0m
-[0;32mI (3542724) TRANSMIT: Sent ints: 9, 30 (ACKs: 2/3)[0m
-ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
-ACK received from 24:EC:4A:52:C3:64: OK
-[0;32mI (3542774) TRANSMIT: ACK received (3/3)[0m
-[0;32mI (3547774) TRANSMIT: Finished transmit loop[0m
-[0;32mI (3547774) TRANSMIT: Finished: received 100 ACKs[0m
+[0;32mI (998664) TRANSMIT: ACK received (1/3)[0m
+[0;32mI (1003664) TRANSMIT: Sent ints: 10, 0 (ACKs: 1/3)[0m
+ESP-NOW send to 24:EC:4A:52:C

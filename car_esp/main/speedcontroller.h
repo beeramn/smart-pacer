@@ -24,8 +24,14 @@ typedef struct {
     float kp;
     float ki;
     float integral;
+    
     int32_t prev_encoder_count;
     int64_t prev_time_us;
+
+    int32_t est_prev_encoder_count;
+    int64_t est_prev_time_us;
+    float filtered_measured_m_s;
+
     float output_max;
     bool initialized;
 } speed_pi_t;
