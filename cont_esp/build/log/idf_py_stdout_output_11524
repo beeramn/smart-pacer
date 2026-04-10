@@ -1,0 +1,84 @@
+Command: ninja flash
+[1/5] cd /Users/flavikeller/Desktop/smart-pacer/cont_esp/build/esp-idf/esptool_py && /Users/flavikeller/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/flavikeller/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/flavikeller/Desktop/smart-pacer/cont_esp/build/partition_table/partition-table.bin /Users/flavikeller/Desktop/smart-pacer/cont_esp/build/cont_esp.bin
+cont_esp.bin binary size 0x10fa70 bytes. Smallest app partition is 0x177000 bytes. 0x67590 bytes (28%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /Users/flavikeller/Desktop/smart-pacer/cont_esp/build/bootloader/esp-idf/esptool_py && /Users/flavikeller/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/flavikeller/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/flavikeller/Desktop/smart-pacer/cont_esp/build/bootloader/bootloader.bin
+Bootloader binary size 0x5260 bytes. 0x2da0 bytes (36%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /Users/flavikeller/esp/esp-idf/components/esptool_py && /opt/homebrew/bin/cmake -D IDF_PATH=/Users/flavikeller/esp/esp-idf -D "SERIAL_TOOL=/Users/flavikeller/.espressif/python_env/idf5.5_py3.9_env/bin/python;;/Users/flavikeller/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/flavikeller/Desktop/smart-pacer/cont_esp/build -P /Users/flavikeller/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbmodem101 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 cont_esp.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.11.dev2
+Serial port /dev/cu.usbmodem101
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 16MB (AP_1v8)
+Crystal is 40MHz
+USB mode: USB-Serial/JTAG
+MAC: 7c:2c:67:9a:56:48
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0011ffff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21088 bytes to 13421...
+Writing at 0x00000000... (100 %)
+Wrote 21088 bytes (13421 compressed) at 0x00000000 in 0.4 seconds (effective 472.5 kbit/s)...
+Hash of data verified.
+Compressed 1112688 bytes to 682571...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d3e0... (4 %)
+Writing at 0x00026d0b... (7 %)
+Writing at 0x0002edca... (9 %)
+Writing at 0x00039fed... (11 %)
+Writing at 0x0003faed... (14 %)
+Writing at 0x00045cd1... (16 %)
+Writing at 0x0004bf9c... (19 %)
+Writing at 0x00052b88... (21 %)
+Writing at 0x0005885d... (23 %)
+Writing at 0x0005e595... (26 %)
+Writing at 0x00064c96... (28 %)
+Writing at 0x0006a79a... (30 %)
+Writing at 0x00070a14... (33 %)
+Writing at 0x00076a2f... (35 %)
+Writing at 0x0007e355... (38 %)
+Writing at 0x00086783... (40 %)
+Writing at 0x0008c795... (42 %)
+Writing at 0x00092fae... (45 %)
+Writing at 0x000991ee... (47 %)
+Writing at 0x0009f17b... (50 %)
+Writing at 0x000a5264... (52 %)
+Writing at 0x000aa5f5... (54 %)
+Writing at 0x000af6ff... (57 %)
+Writing at 0x000b47c0... (59 %)
+Writing at 0x000ba299... (61 %)
+Writing at 0x000bf83f... (64 %)
+Writing at 0x000c4e0b... (66 %)
+Writing at 0x000cabcc... (69 %)
+Writing at 0x000d06b5... (71 %)
+Writing at 0x000d62a6... (73 %)
+Writing at 0x000dbf79... (76 %)
+Writing at 0x000e18a7... (78 %)
+Writing at 0x000e768e... (80 %)
+Writing at 0x000ed0de... (83 %)
+Writing at 0x000f27d3... (85 %)
+Writing at 0x000fbb13... (88 %)
+Writing at 0x001032f5... (90 %)
+Writing at 0x0010983a... (92 %)
+Writing at 0x0010fbc5... (95 %)
+Writing at 0x00116628... (97 %)
+Writing at 0x0011b997... (100 %)
+Wrote 1112688 bytes (682571 compressed) at 0x00010000 in 7.4 seconds (effective 1200.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.1 seconds (effective 416.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

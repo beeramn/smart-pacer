@@ -1,0 +1,150 @@
+Command: /Users/flavikeller/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/flavikeller/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem1101 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/flavikeller/Desktop/smart-pacer/cont_esp/build/cont_esp.elf /Users/flavikeller/Desktop/smart-pacer/cont_esp/build/bootloader/bootloader.elf -m '/Users/flavikeller/.espressif/python_env/idf5.5_py3.9_env/bin/python' '/Users/flavikeller/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048d14
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (18) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (18) boot: compile time Apr  9 2026 23:07:00[0m
+[0;32mI (18) boot: Multicore bootloader[0m
+[0;32mI (18) boot: chip revision: v0.2[0m
+[0;32mI (21) boot: efuse block revision: v1.3[0m
+[0;32mI (24) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (28) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (32) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (40) boot: Partition Table:[0m
+[0;32mI (43) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (49) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (56) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (62) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (69) boot: End of partition table[0m
+[0;32mI (72) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=19864h (104548) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=0002988c vaddr=3fc9ab00 size=04a7ch ( 19068) load[0m
+[0;32mI (102) esp_image: segment 2: paddr=0002e310 vaddr=40374000 size=01d08h (  7432) load[0m
+[0;32mI (104) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=834d0h (537808) map[0m
+[0;32mI (204) esp_image: segment 4: paddr=000b34f8 vaddr=40375d08 size=14d3ch ( 85308) load[0m
+[0;32mI (223) esp_image: segment 5: paddr=000c823c vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (232) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (232) boot: Disabling RNG early entropy source...[0m
+[0;32mI (242) cpu_start: Multicore app[0m
+[0;32mI (252) cpu_start: Pro cpu start user code[0m
+[0;32mI (252) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (252) app_init: Application information:[0m
+[0;32mI (252) app_init: Project name:     car_esp[0m
+[0;32mI (256) app_init: App version:      240dbbe-dirty[0m
+[0;32mI (260) app_init: Compile time:     Apr  9 2026 23:06:25[0m
+[0;32mI (265) app_init: ELF file SHA256:  fb63d2be1...[0m
+[0;32mI (269) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (273) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (277) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (281) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (285) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (291) heap_init: At 3FCA32F0 len 00046420 (281 KiB): RAM[0m
+[0;32mI (296) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (301) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (306) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (313) spi_flash: detected chip: gd[0m
+[0;32mI (315) spi_flash: flash io: dio[0m
+[0;33mW (318) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (331) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (337) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (344) main_task: Started on CPU0[0m
+[0;32mI (354) main_task: Calling app_main()[0m
+[0;32mI (374) pp: pp rom version: e7ae62f[0m
+[0;32mI (374) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (384) wifi:wifi driver task: 3fceeb1c, prio:23, stack:6656, core=0[0m
+[0;32mI (394) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (394) wifi:wifi certification version: v7.0[0m
+[0;32mI (394) wifi:config NVS flash: enabled[0m
+[0;32mI (394) wifi:config nano formatting: disabled[0m
+[0;32mI (394) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (404) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (404) wifi:Init management short buffer num: 32[0m
+[0;32mI (404) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (414) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (414) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (424) wifi:Init static rx buffer num: 10[0m
+[0;32mI (424) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (434) wifi_init: rx ba win: 6[0m
+[0;32mI (434) wifi_init: accept mbox: 6[0m
+[0;32mI (434) wifi_init: tcpip mbox: 32[0m
+[0;32mI (434) wifi_init: udp mbox: 6[0m
+[0;32mI (444) wifi_init: tcp mbox: 6[0m
+[0;32mI (444) wifi_init: tcp tx win: 5760[0m
+[0;32mI (444) wifi_init: tcp rx win: 5760[0m
+[0;32mI (454) wifi_init: tcp mss: 1440[0m
+[0;32mI (454) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (454) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (464) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (504) wifi:mode : sta (24:ec:4a:52:c3:64)[0m
+[0;32mI (504) wifi:enable tsf[0m
+[0;32mI (504) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (504) RECEIVER: ESP-NOW receiver initialized on channel 1[0m
+[0;32mI (2504) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (3524) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (4524) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (5544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (6544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (7544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (8544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (9544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (10544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (11544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (12544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (13544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (14544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+RECEIVED: 8, 0
+[0;32mI (15234) RECEIVER: ACK sent[0m
+[0;32mI (15544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (16544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (17544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (18544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (19544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+RECEIVED: 8, 0
+[0;32mI (20274) RECEIVER: ACK sent[0m
+[0;32mI (20544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (21544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (22544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (23544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (24544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+RECEIVED: 8, 0
+[0;32mI (25324) RECEIVER: ACK sent[0m
+[0;32mI (25544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (26544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (27544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (28544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (29544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (30544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (31544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (32544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (33544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (34544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (35544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (36544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (37544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (38544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (39544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (40544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (41544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (42544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (43544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (44544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (45544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (46544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (47544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (48544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (49544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (50544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (51544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (52544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (53544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (54544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (55544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (56544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (57544) CAR: speed_pi_update out=1.0000 | setpoint=3.353 m/s | meas=0.000 m/s | enc=0[0m

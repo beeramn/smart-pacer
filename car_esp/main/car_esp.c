@@ -152,6 +152,7 @@ void app_main(void){
         }
 
         // ADDED CODE FOR QTI ARRAY AND LINE FOLLOWING // 
+        /*
 
         int weightedSum = 0;
         int activeCount = 0;
@@ -203,7 +204,8 @@ void app_main(void){
             } else {
                 printf("STRAIGHT\n");
             }
-        }
+        
+        }*/
         
         vTaskDelay(period);
     }

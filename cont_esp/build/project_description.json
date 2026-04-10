@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "cont_esp",
-    "project_version":    "9580999-dirty",
+    "project_version":    "240dbbe-dirty",
     "project_path":       "/Users/flavikeller/Desktop/smart-pacer/cont_esp",
     "idf_path":           "/Users/flavikeller/esp/esp-idf",
     "build_dir":          "/Users/flavikeller/Desktop/smart-pacer/cont_esp/build",
