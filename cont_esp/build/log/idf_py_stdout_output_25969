@@ -26,58 +26,58 @@ Flash will be erased from 0x00000000 to 0x00005fff...
 Flash will be erased from 0x00010000 to 0x0011ffff...
 Flash will be erased from 0x00008000 to 0x00008fff...
 SHA digest in image updated
-Compressed 21088 bytes to 13421...
+Compressed 21088 bytes to 13420...
 Writing at 0x00000000... (100 %)
-Wrote 21088 bytes (13421 compressed) at 0x00000000 in 0.4 seconds (effective 472.5 kbit/s)...
+Wrote 21088 bytes (13420 compressed) at 0x00000000 in 0.4 seconds (effective 469.9 kbit/s)...
 Hash of data verified.
-Compressed 1112688 bytes to 682571...
+Compressed 1112688 bytes to 682569...
 Writing at 0x00010000... (2 %)
-Writing at 0x0001d3e0... (4 %)
-Writing at 0x00026d0b... (7 %)
-Writing at 0x0002edca... (9 %)
-Writing at 0x00039fed... (11 %)
-Writing at 0x0003faed... (14 %)
-Writing at 0x00045cd1... (16 %)
-Writing at 0x0004bf9c... (19 %)
-Writing at 0x00052b88... (21 %)
-Writing at 0x0005885d... (23 %)
-Writing at 0x0005e595... (26 %)
-Writing at 0x00064c96... (28 %)
-Writing at 0x0006a79a... (30 %)
-Writing at 0x00070a14... (33 %)
-Writing at 0x00076a2f... (35 %)
-Writing at 0x0007e355... (38 %)
-Writing at 0x00086783... (40 %)
-Writing at 0x0008c795... (42 %)
-Writing at 0x00092fae... (45 %)
-Writing at 0x000991ee... (47 %)
-Writing at 0x0009f17b... (50 %)
-Writing at 0x000a5264... (52 %)
+Writing at 0x0001d3f1... (4 %)
+Writing at 0x00026d0e... (7 %)
+Writing at 0x0002edcc... (9 %)
+Writing at 0x00039ff2... (11 %)
+Writing at 0x0003faf6... (14 %)
+Writing at 0x00045cd4... (16 %)
+Writing at 0x0004bfa9... (19 %)
+Writing at 0x00052b8c... (21 %)
+Writing at 0x00058863... (23 %)
+Writing at 0x0005e598... (26 %)
+Writing at 0x00064c98... (28 %)
+Writing at 0x0006a79c... (30 %)
+Writing at 0x00070a16... (33 %)
+Writing at 0x00076a30... (35 %)
+Writing at 0x0007e35a... (38 %)
+Writing at 0x0008678a... (40 %)
+Writing at 0x0008c798... (42 %)
+Writing at 0x00092fb1... (45 %)
+Writing at 0x000991f1... (47 %)
+Writing at 0x0009f17e... (50 %)
+Writing at 0x000a5268... (52 %)
 Writing at 0x000aa5f5... (54 %)
-Writing at 0x000af6ff... (57 %)
-Writing at 0x000b47c0... (59 %)
-Writing at 0x000ba299... (61 %)
-Writing at 0x000bf83f... (64 %)
-Writing at 0x000c4e0b... (66 %)
-Writing at 0x000cabcc... (69 %)
-Writing at 0x000d06b5... (71 %)
-Writing at 0x000d62a6... (73 %)
-Writing at 0x000dbf79... (76 %)
-Writing at 0x000e18a7... (78 %)
-Writing at 0x000e768e... (80 %)
-Writing at 0x000ed0de... (83 %)
-Writing at 0x000f27d3... (85 %)
-Writing at 0x000fbb13... (88 %)
-Writing at 0x001032f5... (90 %)
-Writing at 0x0010983a... (92 %)
-Writing at 0x0010fbc5... (95 %)
-Writing at 0x00116628... (97 %)
-Writing at 0x0011b997... (100 %)
-Wrote 1112688 bytes (682571 compressed) at 0x00010000 in 7.4 seconds (effective 1200.5 kbit/s)...
+Writing at 0x000af707... (57 %)
+Writing at 0x000b47c5... (59 %)
+Writing at 0x000ba29b... (61 %)
+Writing at 0x000bf845... (64 %)
+Writing at 0x000c4e0f... (66 %)
+Writing at 0x000cabd0... (69 %)
+Writing at 0x000d06b7... (71 %)
+Writing at 0x000d62a9... (73 %)
+Writing at 0x000dbf7d... (76 %)
+Writing at 0x000e18aa... (78 %)
+Writing at 0x000e7693... (80 %)
+Writing at 0x000ed0e0... (83 %)
+Writing at 0x000f27d6... (85 %)
+Writing at 0x000fbb16... (88 %)
+Writing at 0x001032f6... (90 %)
+Writing at 0x0010983f... (92 %)
+Writing at 0x0010fbc7... (95 %)
+Writing at 0x00116629... (97 %)
+Writing at 0x0011b99a... (100 %)
+Wrote 1112688 bytes (682569 compressed) at 0x00010000 in 7.4 seconds (effective 1205.8 kbit/s)...
 Hash of data verified.
 Compressed 3072 bytes to 105...
 Writing at 0x00008000... (100 %)
-Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.1 seconds (effective 416.2 kbit/s)...
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.1 seconds (effective 439.0 kbit/s)...
 Hash of data verified.
 
 Leaving...

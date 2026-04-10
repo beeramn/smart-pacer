@@ -8,7 +8,7 @@
 #include "esp_timer.h"
 #include "receiver.h"
 #include "speedcontroller.h"
-#include "linefollower.h"
+//#include "linefollower.h"
 #include <stdbool.h>
 #include <stdint.h>
 
@@ -109,8 +109,8 @@ void app_main(void){
     motor_driver_init();
 
     // init QTI array and steering servo
-    init_line_sensors();
-    init_servo();
+    //init_line_sensors();
+    //init_servo();
 
     // init the PI
     static speed_pi_t s_pi;
@@ -210,5 +210,3 @@ void app_main(void){
         vTaskDelay(period);
     }
 }
-
-
