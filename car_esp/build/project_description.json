@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "car_esp",
-    "project_version":    "6cb7226e-dirty",
+    "project_version":    "38dca43c-dirty",
     "project_path":       "/Users/flavikeller/Desktop/smart-pacer/car_esp",
     "idf_path":           "/Users/flavikeller/esp/esp-idf",
     "build_dir":          "/Users/flavikeller/Desktop/smart-pacer/car_esp/build",
