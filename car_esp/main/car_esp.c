@@ -8,7 +8,7 @@
 #include "esp_timer.h"
 #include "receiver.h"
 #include "speedcontroller.h"
-//#include "linefollower.h"
+#include "linefollower.h"
 #include <stdbool.h>
 #include <stdint.h>
 
@@ -18,7 +18,7 @@ static const char *TAG = "CAR";
 #define ENCODER_GPIO 10
 // Motor GPIO stuff
 #define MOTOR_RPWM_GPIO   14
-#define MOTOR_EN_GPIO    16 // connect both enables to this pin, both must be on
+//#define MOTOR_EN_GPIO    16 // connect both enables to this pin, both must be on
 // LRPM pin we can connect to ground, we can also just connect enables directly to power
 
 #define MOTOR_LEDC_TIMER       LEDC_TIMER_0
@@ -53,6 +53,7 @@ static void encoder_gpio_init(void){
 // init motor driver
 static void motor_driver_init(void){
     // Enable pins as normal GPIO outputs
+    /*
     gpio_config_t io = {
         .pin_bit_mask = 1ULL << MOTOR_EN_GPIO,
         .mode = GPIO_MODE_OUTPUT,
@@ -64,6 +65,7 @@ static void motor_driver_init(void){
 
     // Turn on both BTS7960 enable pins
     ESP_ERROR_CHECK(gpio_set_level(MOTOR_EN_GPIO, 1));
+    */
 
     // Configure PWM timer
     ledc_timer_config_t tcfg = {

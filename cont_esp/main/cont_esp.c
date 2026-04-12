@@ -39,21 +39,11 @@ static void tx_task(void *pvParameters)
     free(args);
     vTaskDelete(NULL);
 }
-
-// function that happens when the start button is pressed
-
-
-static void my_start_cb(lv_event_t *e)
-{
-    ui_context_t *ui = (ui_context_t *)lv_event_get_user_data(e);
-    uint16_t min = ui_get_selected_minutes(ui);
-    uint16_t sec = ui_get_selected_seconds(ui);
-
-    ESP_LOGI(TAG, "Start pressed with pace %u:%02u", min, sec);
-
+// helper function for launching task
+static bool launch_tx_task(int value1, int value2){
     if (s_tx_running) {
         ESP_LOGW(TAG, "Transmit task already running");
-        return;
+        return false;
     }
 
     s_stop_requested = false;
@@ -61,12 +51,12 @@ static void my_start_cb(lv_event_t *e)
     tx_task_args_t *args = malloc(sizeof(tx_task_args_t));
     if (args == NULL) {
         ESP_LOGE(TAG, "Failed to allocate tx task args");
-        return;
+        return false;
     }
 
     memcpy(args->mac, receiver_mac, ESP_NOW_ETH_ALEN);
-    args->value1 = min;
-    args->value2 = sec;
+    args->value1 = value1;
+    args->value2 = value2;
 
     BaseType_t ok = xTaskCreate(
         tx_task,
@@ -80,18 +70,54 @@ static void my_start_cb(lv_event_t *e)
     if (ok != pdPASS) {
         ESP_LOGE(TAG, "Failed to create tx task");
         free(args);
+        return false;
     }
+
+    return true;
+}
+
+// function that happens when the start button is pressed
+static void my_start_cb(lv_event_t *e)
+{
+    ui_context_t *ui = (ui_context_t *)lv_event_get_user_data(e);
+    uint16_t min = ui_get_selected_minutes(ui);
+    uint16_t sec = ui_get_selected_seconds(ui);
+
+    ESP_LOGI(TAG, "Start pressed with pace %u:%02u", min, sec);
+    launch_tx_task((int)min, (int)sec);
+}
+// helper task to send stop packet when current tx ends
+static void stop_send_task(void *pvParameters)
+{
+    (void)pvParameters;
+
+    // wait for any active transmit task to stop
+    while (s_tx_running) {
+        vTaskDelay(pdMS_TO_TICKS(10));
+    }
+
+    ESP_LOGI(TAG, "Sending stop pace 0:00");
+    launch_tx_task(0, 0);
+
+    vTaskDelete(NULL);
 }
 //function that happens when the stop button is pressed
-static void my_stop_cb(lv_event_t *e)
-{
+static void my_stop_cb(lv_event_t *e){
     (void)e;
+    s_stop_requested = true;
+    ESP_LOGI(TAG, "Stop requested");
+    // launch a tiny helper task that waits, then sends 0:00
+    BaseType_t ok = xTaskCreate(
+        stop_send_task,
+        "stop_send_task",
+        3072,
+        NULL,
+        5,
+        NULL
+    );
 
-    if (s_tx_running) {
-        s_stop_requested = true;
-        ESP_LOGI(TAG, "Stop requested");
-    } else {
-        ESP_LOGI(TAG, "No transmit task is running");
+    if (ok != pdPASS) {
+        ESP_LOGE(TAG, "Failed to create stop_send_task");
     }
 }
 
