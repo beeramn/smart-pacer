@@ -158,7 +158,7 @@ void app_main(void){
         int weightedSum = 0;
         int activeCount = 0;
 
-        printf("Sensors: ");
+        // printf("Sensors: ");
 
         for (int i = 0; i < 8; i++) {
             int raw = gpio_get_level(sensorPins[i]);
@@ -166,7 +166,7 @@ void app_main(void){
             // convert to "line detected" = 1
             int onLine = LINE_IS_BLACK ? raw : !raw;
 
-            printf("%d ", onLine);
+            // printf("%d ", onLine);
 
             if (onLine) {
                 weightedSum += weights[i];
@@ -175,13 +175,13 @@ void app_main(void){
         }
 
         if (activeCount == 0) {
-            printf(" -> line lost");
+            // printf(" -> line lost");
             set_pulse_us(lastPulseUs);
-            printf(" -> servo pulse: %lu\n", (unsigned long)lastPulseUs);
+            // printf(" -> servo pulse: %lu\n", (unsigned long)lastPulseUs);
         } else {
             int error = weightedSum / activeCount; // about -350 to +350
 
-            printf(" -> error: %d", error);
+            // printf(" -> error: %d", error);
 
             int pulseUs = map_int(error, -350, 350, SERVO_LEFT_US, SERVO_RIGHT_US);
             pulseUs = constrain_int(pulseUs, SERVO_LEFT_US, SERVO_RIGHT_US);
@@ -192,19 +192,19 @@ void app_main(void){
             set_pulse_us((uint32_t)pulseUs);
             lastPulseUs = (uint32_t)pulseUs;
 
-            printf(" -> servo pulse: %d -> ", pulseUs);
+            // printf(" -> servo pulse: %d -> ", pulseUs);
 
-            if (error < -180) {
-                printf("turn LEFT hard\n");
-            } else if (error < -60) {
-                printf("turn LEFT\n");
-            } else if (error > 180) {
-                printf("turn RIGHT hard\n");
-            } else if (error > 60) {
-                printf("turn RIGHT\n");
-            } else {
-                printf("STRAIGHT\n");
-            }
+            // if (error < -180) {
+            //     printf("turn LEFT hard\n");
+            // } else if (error < -60) {
+            //     printf("turn LEFT\n");
+            // } else if (error > 180) {
+            //     printf("turn RIGHT hard\n");
+            // } else if (error > 60) {
+            //     printf("turn RIGHT\n");
+            // } else {
+            //     printf("STRAIGHT\n");
+            // }
         
         }
         
