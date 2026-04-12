@@ -19,8 +19,8 @@ static const uint32_t DUTY_MAX = ((1 << 14) - 1);
 const gpio_num_t sensorPins[8] = {
     GPIO_NUM_12,
     GPIO_NUM_11,
-    GPIO_NUM_14,
-    GPIO_NUM_10,
+    GPIO_NUM_20, // changed from GPIO 14
+    GPIO_NUM_19, // changes from GPIO 10
     GPIO_NUM_42,
     GPIO_NUM_13,
     GPIO_NUM_9,

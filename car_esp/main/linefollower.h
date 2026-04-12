@@ -6,7 +6,7 @@
 #include "driver/gpio.h"
 
 // ================= PIN MAPPING =================
-#define EN_PIN GPIO_NUM_41
+#define EN_PIN GPIO_NUM_41 // TODO tie to high
 #define SERVO_GPIO GPIO_NUM_38
 
 extern const gpio_num_t sensorPins[8];
