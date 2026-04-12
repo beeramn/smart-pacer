@@ -111,8 +111,8 @@ void app_main(void){
     motor_driver_init();
 
     // init QTI array and steering servo
-    //init_line_sensors();
-    //init_servo();
+    init_line_sensors();
+    init_servo();
 
     // init the PI
     static speed_pi_t s_pi;
@@ -154,7 +154,6 @@ void app_main(void){
         }
 
         // ADDED CODE FOR QTI ARRAY AND LINE FOLLOWING // 
-        /*
 
         int weightedSum = 0;
         int activeCount = 0;
@@ -207,7 +206,7 @@ void app_main(void){
                 printf("STRAIGHT\n");
             }
         
-        }*/
+        }
         
         vTaskDelay(period);
     }
