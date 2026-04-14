@@ -42,9 +42,9 @@ static void encoder_gpio_init(void){
     gpio_config_t io = {
         .pin_bit_mask = 1ULL << ENCODER_GPIO,
         .mode = GPIO_MODE_INPUT,
-        .pull_up_en = GPIO_PULLUP_DISABLE,
+        .pull_up_en = GPIO_PULLUP_ENABLE, // changed from disable
         .pull_down_en = GPIO_PULLDOWN_DISABLE,
-        .intr_type = GPIO_INTR_POSEDGE,
+        .intr_type = GPIO_INTR_ANYEDGE, // changed from GPIO_INTR_ANYEDGE
     };
     ESP_ERROR_CHECK(gpio_config(&io));
     ESP_ERROR_CHECK(gpio_install_isr_service(0));

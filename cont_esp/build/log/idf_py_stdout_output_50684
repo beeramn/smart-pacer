@@ -280,4 +280,78 @@ ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
 ACK received from 24:EC:4A:52:C3:64: OK
 [0;32mI (406204) TRANSMIT: ACK received (1/3)[0m
 [0;32mI (411204) TRANSMIT: Sent ints: 10, 15 (ACKs: 1/3)[0m
-ESP-NOW send to 24:EC:4
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (411254) TRANSMIT: ACK received (2/3)[0m
+[0;32mI (416254) TRANSMIT: Sent ints: 10, 15 (ACKs: 2/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (416304) TRANSMIT: ACK received (3/3)[0m
+[0;32mI (421304) TRANSMIT: Finished transmit loop[0m
+[0;32mI (421304) TRANSMIT: Finished: received 100 ACKs[0m
+[0;32mI (471994) MAIN: Start pressed with pace 10:15[0m
+[0;33mW (471994) ESPNOW: Peer exists. Please call API esp_now_mod_peer()![0m
+[0;32mI (471994) TRANSMIT: Sent ints: 10, 15 (ACKs: 0/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (472004) TRANSMIT: ACK received (1/3)[0m
+[0;32mI (477004) TRANSMIT: Sent ints: 10, 15 (ACKs: 1/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (477054) TRANSMIT: ACK received (2/3)[0m
+[0;32mI (482054) TRANSMIT: Sent ints: 10, 15 (ACKs: 2/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (482104) TRANSMIT: ACK received (3/3)[0m
+[0;32mI (487104) TRANSMIT: Finished transmit loop[0m
+[0;32mI (487104) TRANSMIT: Finished: received 100 ACKs[0m
+[0;32mI (540644) MAIN: Stop requested[0m
+[0;32mI (540644) MAIN: Sending stop pace 0:00[0m
+[0;33mW (540644) ESPNOW: Peer exists. Please call API esp_now_mod_peer()![0m
+[0;32mI (540644) TRANSMIT: Sent ints: 0, 0 (ACKs: 0/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (540694) TRANSMIT: ACK received (1/3)[0m
+[0;32mI (545694) TRANSMIT: Sent ints: 0, 0 (ACKs: 1/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (545744) TRANSMIT: ACK received (2/3)[0m
+[0;32mI (550744) TRANSMIT: Sent ints: 0, 0 (ACKs: 2/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (550794) TRANSMIT: ACK received (3/3)[0m
+[0;32mI (555794) TRANSMIT: Finished transmit loop[0m
+[0;32mI (555794) TRANSMIT: Finished: received 100 ACKs[0m
+[0;32mI (764744) MAIN: Start pressed with pace 6:15[0m
+[0;33mW (764744) ESPNOW: Peer exists. Please call API esp_now_mod_peer()![0m
+[0;32mI (764744) TRANSMIT: Sent ints: 6, 15 (ACKs: 0/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (764754) TRANSMIT: ACK received (1/3)[0m
+[0;32mI (769754) TRANSMIT: Sent ints: 6, 15 (ACKs: 1/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (769804) TRANSMIT: ACK received (2/3)[0m
+[0;32mI (774804) TRANSMIT: Sent ints: 6, 15 (ACKs: 2/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (774854) TRANSMIT: ACK received (3/3)[0m
+[0;32mI (779854) TRANSMIT: Finished transmit loop[0m
+[0;32mI (779854) TRANSMIT: Finished: received 100 ACKs[0m
+[0;32mI (809154) MAIN: Stop requested[0m
+[0;32mI (809154) MAIN: Sending stop pace 0:00[0m
+[0;33mW (809154) ESPNOW: Peer exists. Please call API esp_now_mod_peer()![0m
+[0;32mI (809154) TRANSMIT: Sent ints: 0, 0 (ACKs: 0/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (809204) TRANSMIT: ACK received (1/3)[0m
+[0;32mI (814204) TRANSMIT: Sent ints: 0, 0 (ACKs: 1/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (814254) TRANSMIT: ACK received (2/3)[0m
+[0;32mI (819254) TRANSMIT: Sent ints: 0, 0 (ACKs: 2/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (819304) TRANSMIT: ACK received (3/3)[0m
+[0;32mI (824304) TRANSMIT: Finished transmit loop[0m
+[0;32mI (824304) TRANSMIT: Finished: received 100 ACKs[0m

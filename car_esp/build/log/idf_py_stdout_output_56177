@@ -1,0 +1,441 @@
+Command: /Users/flavikeller/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/flavikeller/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem1101 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/flavikeller/Desktop/smart-pacer/car_esp/build/car_esp.elf /Users/flavikeller/Desktop/smart-pacer/car_esp/build/bootloader/bootloader.elf -m '/Users/flavikeller/.espressif/python_env/idf5.5_py3.9_env/bin/python' '/Users/flavikeller/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048ede
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (18) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (18) boot: compile time Apr 12 2026 18:42:37[0m
+[0;32mI (18) boot: Multicore bootloader[0m
+[0;32mI (18) boot: chip revision: v0.2[0m
+[0;32mI (21) boot: efuse block revision: v1.3[0m
+[0;32mI (24) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (28) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (32) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (40) boot: Partition Table:[0m
+[0;32mI (43) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (49) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (56) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (62) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (69) boot: End of partition table[0m
+[0;32mI (72) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=19854h (104532) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=0002987c vaddr=3fc9ab00 size=04a7ch ( 19068) load[0m
+[0;32mI (102) esp_image: segment 2: paddr=0002e300 vaddr=40374000 size=01d18h (  7448) load[0m
+[0;32mI (104) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=835fch (538108) map[0m
+[0;32mI (204) esp_image: segment 4: paddr=000b3624 vaddr=40375d18 size=14d2ch ( 85292) load[0m
+[0;32mI (223) esp_image: segment 5: paddr=000c8358 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (232) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (232) boot: Disabling RNG early entropy source...[0m
+[0;32mI (242) cpu_start: Multicore app[0m
+[0;32mI (252) cpu_start: Pro cpu start user code[0m
+[0;32mI (252) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (252) app_init: Application information:[0m
+[0;32mI (252) app_init: Project name:     car_esp[0m
+[0;32mI (256) app_init: App version:      d5128165-dirty[0m
+[0;32mI (260) app_init: Compile time:     Apr 13 2026 16:39:08[0m
+[0;32mI (265) app_init: ELF file SHA256:  829e36992...[0m
+[0;32mI (269) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (273) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (277) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (281) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (285) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (291) heap_init: At 3FCA32F8 len 00046418 (281 KiB): RAM[0m
+[0;32mI (296) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (301) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (307) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (313) spi_flash: detected chip: gd[0m
+[0;32mI (315) spi_flash: flash io: dio[0m
+[0;33mW (318) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (331) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (337) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (344) main_task: Started on CPU0[0m
+[0;32mI (354) main_task: Calling app_main()[0m
+[0;32mI (374) pp: pp rom version: e7ae62f[0m
+[0;32mI (374) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (384) wifi:wifi driver task: 3fceeb1c, prio:23, stack:6656, core=0[0m
+[0;32mI (394) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (394) wifi:wifi certification version: v7.0[0m
+[0;32mI (394) wifi:config NVS flash: enabled[0m
+[0;32mI (394) wifi:config nano formatting: disabled[0m
+[0;32mI (394) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (404) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (404) wifi:Init management short buffer num: 32[0m
+[0;32mI (404) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (414) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (414) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (424) wifi:Init static rx buffer num: 10[0m
+[0;32mI (424) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (434) wifi_init: rx ba win: 6[0m
+[0;32mI (434) wifi_init: accept mbox: 6[0m
+[0;32mI (434) wifi_init: tcpip mbox: 32[0m
+[0;32mI (434) wifi_init: udp mbox: 6[0m
+[0;32mI (444) wifi_init: tcp mbox: 6[0m
+[0;32mI (444) wifi_init: tcp tx win: 5760[0m
+[0;32mI (444) wifi_init: tcp rx win: 5760[0m
+[0;32mI (454) wifi_init: tcp mss: 1440[0m
+[0;32mI (454) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (454) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (464) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (504) wifi:mode : sta (24:ec:4a:52:c3:64)[0m
+[0;32mI (504) wifi:enable tsf[0m
+[0;32mI (504) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (504) RECEIVER: ESP-NOW receiver initialized on channel 1[0m
+[0;32mI (2504) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (3524) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (4524) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (5544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (6544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (7544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (8544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (9544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (10544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (11544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (12544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (13544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (14544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (15544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (16544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (17544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (18544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (19544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (20544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (21544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (22544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (23544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (24544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (25544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (26544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (27544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (28544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (29544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (30544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (31544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (32544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (33544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (34544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (35544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (36544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (37544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (38544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (39544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (40544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (41544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (42544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (43544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (44544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (45544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (46544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (47544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (48544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (49544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (50544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (51544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (52544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (53544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (54544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (55544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (56544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (57544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (58544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (59544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (60544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (61544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (62544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (63544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (64544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (65544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (66544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (67544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (68544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (69544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (70544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (71544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (72544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (73544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (74544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (75544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (76544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (77544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (78544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (79544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (80544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (81544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (82544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (83544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (84544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (85544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (86544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (87544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (88544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (89544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (90544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (91544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (92544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (93544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (94544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (95544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (96544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (97544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (98544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (99544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (100544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (101544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (102544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (103544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (104544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (105544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (106544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (107544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (108544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (109544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (110544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (111544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (112544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (113544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (114544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (115544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (116544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (117544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (118544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (119544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (120544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (121544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (122544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (123544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (124544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (125544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (126544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (127544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (128544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (129544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (130544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (131544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (132544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (133544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (134544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (135544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (136544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (137544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (138544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (139544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (140544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (141544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (142544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (143544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (144544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (145544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (146544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (147544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (148544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (149544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (150544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (151544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (152544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (153544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (154544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (155544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (156544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (157544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (158544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (159544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (160544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (161544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (162544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (163544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (164544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (165544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (166544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (167544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (168544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (169544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (170544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (171544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (172544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (173544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (174544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (175544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (176544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (177544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (178544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (179544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (180544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (181544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (182544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (183544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (184544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (185544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (186544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (187544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (188544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (189544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (190544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (191544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (192544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (193544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (194544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (195544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (196544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (197544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (198544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (199544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (200544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (201544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (202544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (203544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (204544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (205544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (206544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (207544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (208544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (209544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (210544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (211544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (212544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (213544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (214544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (215544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (216544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (217544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (218544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (219544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (220544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (221544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (222544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (223544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (224544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (225544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (226544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (227544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (228544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (229544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (230544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (231544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (232544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (233544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (234544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (235544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (236544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (237544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (238544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (239544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (240544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (241544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (242544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (243544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (244544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (245544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (246544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (247544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (248544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (249544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (250544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (251544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (252544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (253544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (254544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (255544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (256544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (257544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (258544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (259544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (260544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (261544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (262544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (263544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (264544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (265544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (266544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (267544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (268544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (269544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (270544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (271544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (272544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (273544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (274544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (275544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (276544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (277544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (278544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (279544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (280544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (281544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (282544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (283544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (284544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (285544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (286544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (287544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (288544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (289544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (290544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (291544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (292544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (293544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (294544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (295544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (296544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (297544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (298544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (299544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (300544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (301544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (302544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (303544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (304544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (305544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (306544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (307544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (308544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (309544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (310544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (311544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (312544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (313544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (314544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (315544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (316544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (317544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (318544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (319544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (320544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (321544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (322544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (323544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (324544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (325544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (326544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (327544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (328544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (329544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (330544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (331544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (332544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (333544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (334544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (335544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (336544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (337544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (338544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (339544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (340544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (341544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (342544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (343544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (344544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (345544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (346544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (347544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (348544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (349544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (350544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (351544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (352544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (353544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
+[0;32mI (354544) CAR: speed_pi_update out=0.0000 | setpoint=0.000 m/s | meas=0.000 m/s | enc=0[0m
