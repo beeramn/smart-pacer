@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-
 #include "get_mac.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
