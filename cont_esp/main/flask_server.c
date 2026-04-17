@@ -89,28 +89,3 @@ static void wifi_init_sta(void) {
   xEventGroupWaitBits(s_wifi_event_group, WIFI_CONNECTED_BIT, pdFALSE, pdTRUE,
                       portMAX_DELAY);
 }
-
-static void one_second_timer_isr(void *arg) { start_bool = true; }
-
-void app_main(void) {
-  wifi_init_sta();
-
-  esp_timer_create_args_t one_second_timer_args = {
-      .callback = &one_second_timer_isr,
-      .name = "one_second_timer",
-  };
-  esp_timer_handle_t one_second_timer;
-  esp_timer_create(&one_second_timer_args, &one_second_timer);
-  esp_timer_start_periodic(one_second_timer, 1000000);
-
-  char new_text[512];
-
-  while (1) {
-    if (start_bool) {
-      send_sensor_data("hehe", "hehe", "hehe");
-      start_bool = false;
-    }
-
-    vTaskDelay(pdMS_TO_TICKS(10));
-  }
-}

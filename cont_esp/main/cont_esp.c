@@ -8,6 +8,7 @@
 #include "ui.h"
 #include "esp_log.h"
 #include "nvs_flash.h"
+#include "flask_server.h"
 
 static const char *TAG = "MAIN";
 static ui_context_t g_ui;
@@ -120,6 +121,8 @@ static void my_stop_cb(lv_event_t *e){
     }
 }
 
+static void one_second_timer_isr(void *arg) { start_bool = true; }
+
 void app_main(void)
 {
     espnow_transmit_init(1);
@@ -136,5 +139,26 @@ void app_main(void)
 
     while (1) {
         vTaskDelay(pdMS_TO_TICKS(100));
+    }
+
+    wifi_init_sta();
+  
+    esp_timer_create_args_t one_second_timer_args = {
+        .callback = &one_second_timer_isr,
+        .name = "one_second_timer",
+    };
+    esp_timer_handle_t one_second_timer;
+    esp_timer_create(&one_second_timer_args, &one_second_timer);
+    esp_timer_start_periodic(one_second_timer, 1000000);
+  
+    char new_text[512];
+  
+    while (1) {
+      if (start_bool) {
+        send_sensor_data("hehe", "hehe", "hehe");
+        start_bool = false;
+      }
+  
+      vTaskDelay(pdMS_TO_TICKS(10));
     }
 }
