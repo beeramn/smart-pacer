@@ -1,0 +1,22 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /Users/neylakirby/repos/smart-pacer/cont_esp/build/bootloader/esp-idf/esptool_py && /Users/neylakirby/.espressif/python_env/idf5.5_py3.12_env/bin/python /Users/neylakirby/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/neylakirby/repos/smart-pacer/cont_esp/build/bootloader/bootloader.bin
+Bootloader binary size 0x5260 bytes. 0x2da0 bytes (36%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/cont_esp.c.obj
+/Users/neylakirby/repos/smart-pacer/cont_esp/main/cont_esp.c:127:13: warning: 'one_second_timer_isr' defined but not used [-Wunused-function]
+  127 | static void one_second_timer_isr(void *arg) { start_bool = true; }
+      |             ^~~~~~~~~~~~~~~~~~~~
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+info: Trying to set symbol PARTITION_TABLE_SINGLE_APP to n, but it is currently selected by choice PARTITION_TABLE_TYPE. For setting it to n, set another choice symbol to y instead.
+[7/9] Linking CXX executable cont_esp.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.11.dev2
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /Users/neylakirby/repos/smart-pacer/cont_esp/build/cont_esp.bin
+[9/9] cd /Users/neylakirby/repos/smart-pacer/cont_esp/build/esp-idf/esptool_py && /Users/neylakirby/.espressif/python_env/idf5.5_py3.12_env/bin/python /Users/neylakirby/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/neylakirby/repos/smart-pacer/cont_esp/build/partition_table/partition-table.bin /Users/neylakirby/repos/smart-pacer/cont_esp/build/cont_esp.bin
+cont_esp.bin binary size 0x13c600 bytes. Smallest app partition is 0x177000 bytes. 0x3aa00 bytes (16%) free.

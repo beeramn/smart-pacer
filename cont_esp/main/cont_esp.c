@@ -9,12 +9,19 @@
 #include "esp_log.h"
 #include "nvs_flash.h"
 #include "flask_server.h"
+#include "esp_timer.h"
+
+volatile bool start_bool = false;
 
 static const char *TAG = "MAIN";
 static ui_context_t g_ui;
 
 static volatile bool s_stop_requested = false;
 static volatile bool s_tx_running = false;
+
+/** Monotonic time from esp_timer_get_time(): when Start / Stop was last pressed (microseconds). */
+static volatile int64_t s_pace_start_us;
+static volatile int64_t s_pace_stop_us;
 
 typedef struct {
     uint8_t mac[ESP_NOW_ETH_ALEN];
@@ -83,7 +90,11 @@ static void my_start_cb(lv_event_t *e)
     uint16_t min = ui_get_selected_minutes(ui);
     uint16_t sec = ui_get_selected_seconds(ui);
 
-    ESP_LOGI(TAG, "Start pressed with pace %u:%02u", min, sec);
+    s_pace_start_us = esp_timer_get_time();
+    s_pace_stop_us = 0;
+
+    ESP_LOGI(TAG, "Start pressed with pace %u:%02u (t_start=%lld us)", min, sec,
+             (long long)s_pace_start_us);
     launch_tx_task((int)min, (int)sec);
 }
 // helper task to send stop packet when current tx ends
@@ -104,8 +115,10 @@ static void stop_send_task(void *pvParameters)
 //function that happens when the stop button is pressed
 static void my_stop_cb(lv_event_t *e){
     (void)e;
+    s_pace_stop_us = esp_timer_get_time();
+    ESP_LOGI(TAG, "Stop requested (t_stop=%lld us)", (long long)s_pace_stop_us);
+
     s_stop_requested = true;
-    ESP_LOGI(TAG, "Stop requested");
     // launch a tiny helper task that waits, then sends 0:00
     BaseType_t ok = xTaskCreate(
         stop_send_task,
@@ -137,28 +150,19 @@ void app_main(void)
 
     ESP_LOGI(TAG, "System ready");
 
+    wifi_init_sta();
+  
     while (1) {
+        uint16_t min = ui_get_selected_minutes(&g_ui);
+        uint16_t sec = ui_get_selected_seconds(&g_ui);
+
+        double t_start_s =
+            (s_pace_start_us > 0) ? (double)s_pace_start_us * 1e-6 : 0.0;
+        double t_stop_s =
+            (s_pace_stop_us > 0) ? (double)s_pace_stop_us * 1e-6 : 0.0;
+
+        send_sensor_data(t_start_s, t_stop_s, (int)min, (int)sec);
         vTaskDelay(pdMS_TO_TICKS(100));
     }
 
-    wifi_init_sta();
-  
-    esp_timer_create_args_t one_second_timer_args = {
-        .callback = &one_second_timer_isr,
-        .name = "one_second_timer",
-    };
-    esp_timer_handle_t one_second_timer;
-    esp_timer_create(&one_second_timer_args, &one_second_timer);
-    esp_timer_start_periodic(one_second_timer, 1000000);
-  
-    char new_text[512];
-  
-    while (1) {
-      if (start_bool) {
-        send_sensor_data("hehe", "hehe", "hehe");
-        start_bool = false;
-      }
-  
-      vTaskDelay(pdMS_TO_TICKS(10));
-    }
 }

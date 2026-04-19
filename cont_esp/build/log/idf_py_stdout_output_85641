@@ -1,0 +1,277 @@
+Command: /Users/neylakirby/.espressif/python_env/idf5.5_py3.12_env/bin/python /Users/neylakirby/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem2101 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/neylakirby/repos/smart-pacer/cont_esp/build/cont_esp.elf /Users/neylakirby/repos/smart-pacer/cont_esp/build/bootloader/bootloader.elf -m '/Users/neylakirby/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/Users/neylakirby/esp/esp-idf/tools/idf.py' '-p' '/dev/cu.usbmodem2101'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037bcf6
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (18) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (18) boot: compile time Apr 17 2026 09:40:55[0m
+[0;32mI (18) boot: Multicore bootloader[0m
+[0;32mI (18) boot: chip revision: v0.2[0m
+[0;32mI (21) boot: efuse block revision: v1.3[0m
+[0;32mI (24) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (28) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (32) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (40) boot: Partition Table:[0m
+[0;32mI (43) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (49) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (56) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (62) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (69) boot: End of partition table[0m
+[0;32mI (72) esp_image: segment 0: paddr=00010020 vaddr=3c100020 size=29dech (171500) map[0m
+[0;32mI (110) esp_image: segment 1: paddr=00039e14 vaddr=3fc9e400 size=04bf8h ( 19448) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=0003ea14 vaddr=40374000 size=01604h (  5636) load[0m
+[0;32mI (116) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=f392ch (997676) map[0m
+[0;32mI (297) esp_image: segment 4: paddr=00133954 vaddr=40375604 size=18da0h (101792) load[0m
+[0;32mI (319) esp_image: segment 5: paddr=0014c6fc vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (330) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (330) boot: Disabling RNG early entropy source...[0m
+[0;32mI (340) cpu_start: Multicore app[0m
+[0;32mI (349) cpu_start: Pro cpu start user code[0m
+[0;32mI (349) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (350) app_init: Application information:[0m
+[0;32mI (350) app_init: Project name:     cont_esp[0m
+[0;32mI (354) app_init: App version:      400099d1-dirty[0m
+[0;32mI (358) app_init: Compile time:     Apr 17 2026 09:40:34[0m
+[0;32mI (363) app_init: ELF file SHA256:  4198b2b38...[0m
+[0;32mI (367) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (371) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (375) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (379) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (383) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (389) heap_init: At 3FCB76E0 len 00032030 (200 KiB): RAM[0m
+[0;32mI (394) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (399) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (405) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (411) spi_flash: detected chip: gd[0m
+[0;32mI (413) spi_flash: flash io: dio[0m
+[0;33mW (416) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (428) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (438) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (444) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (451) main_task: Started on CPU0[0m
+[0;32mI (461) main_task: Calling app_main()[0m
+[0;32mI (481) pp: pp rom version: e7ae62f[0m
+[0;32mI (481) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (491) wifi:wifi driver task: 3fced4e4, prio:23, stack:6656, core=0[0m
+[0;32mI (501) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (501) wifi:wifi certification version: v7.0[0m
+[0;32mI (501) wifi:config NVS flash: enabled[0m
+[0;32mI (501) wifi:config nano formatting: disabled[0m
+[0;32mI (501) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (511) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (511) wifi:Init management short buffer num: 32[0m
+[0;32mI (511) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (521) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (521) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (531) wifi:Init static rx buffer num: 10[0m
+[0;32mI (531) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (541) wifi_init: rx ba win: 6[0m
+[0;32mI (541) wifi_init: accept mbox: 6[0m
+[0;32mI (541) wifi_init: tcpip mbox: 32[0m
+[0;32mI (541) wifi_init: udp mbox: 6[0m
+[0;32mI (551) wifi_init: tcp mbox: 6[0m
+[0;32mI (551) wifi_init: tcp tx win: 5760[0m
+[0;32mI (551) wifi_init: tcp rx win: 5760[0m
+[0;32mI (561) wifi_init: tcp mss: 1440[0m
+[0;32mI (561) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (561) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (571) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (611) wifi:mode : sta (7c:2c:67:9a:56:48)[0m
+[0;32mI (611) wifi:enable tsf[0m
+[0;32mI (611) TRANSMIT: Wi-Fi STA started[0m
+[0;32mI (611) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (611) TRANSMIT: ESP-NOW transmit initialized on channel 1[0m
+[0;32mI (621) PACE_UI: Turn off LCD backlight[0m
+[0;32mI (621) PACE_UI: Initialize SPI bus[0m
+[0;32mI (621) PACE_UI: Install panel IO[0m
+[0;32mI (631) PACE_UI: Install ILI9341 panel driver[0m
+[0;32mI (631) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (751) PACE_UI: Turn on LCD backlight[0m
+[0;32mI (751) PACE_UI: Initialize LVGL[0m
+[0;32mI (751) LVGL: Starting LVGL task[0m
+[0;32mI (791) PACE_UI: Initializing touch[0m
+[0;32mI (791) PACE_UI: GT911 found at 0x14[0m
+[0;32mI (851) GT911: I2C address initialization procedure skipped - using default GT9xx setup[0m
+[1;31mE (851) lcd_panel.io.i2c: panel_io_i2c_rx_buffer(140): i2c transaction failed[0m
+[1;31mE (851) GT911: touch_gt911_read_cfg(419): GT911 read error![0m
+[1;31mE (851) GT911: esp_lcd_touch_new_i2c_gt911(169): GT911 init failed[0m
+[1;31mE (861) GT911: Error (0xffffffff)! Touch controller GT911 initialization failed![0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x4204a633
+file: "/Users/neylakirby/repos/smart-pacer/shared_components/common_code/ui.c" line 236
+func: ui_touch_init
+expression: esp_lcd_touch_new_i2c_gt911(tp_io_handle, &tp_cfg, &s_tp_handle)
+
+abort() was called at PC 0x4037ea8f on core 0
+
+
+Backtrace: 0x40375e3d:0x3fcbad50 0x4037ea99:0x3fcbad70 0x403880a9:0x3fcbad90 0x4037ea8f:0x3fcbae00 0x4204a633:0x3fcbae30 0x4204a850:0x3fcbaed0 0x4200abc7:0x3fcbaef0 0x420f2748:0x3fcbaf10 0x4037f599:0x3fcbaf40
+
+
+
+
+ELF file SHA256: 4198b2b38
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40375d7c
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (18) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (18) boot: compile time Apr 17 2026 09:40:55[0m
+[0;32mI (18) boot: Multicore bootloader[0m
+[0;32mI (18) boot: chip revision: v0.2[0m
+[0;32mI (21) boot: efuse block revision: v1.3[0m
+[0;32mI (24) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (28) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (32) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (40) boot: Partition Table:[0m
+[0;32mI (43) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (49) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (56) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (62) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (69) boot: End of partition table[0m
+[0;32mI (72) esp_image: segment 0: paddr=00010020 vaddr=3c100020 size=29dech (171500) map[0m
+[0;32mI (110) esp_image: segment 1: paddr=00039e14 vaddr=3fc9e400 size=04bf8h ( 19448) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=0003ea14 vaddr=40374000 size=01604h (  5636) load[0m
+[0;32mI (116) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=f392ch (997676) map[0m
+[0;32mI (297) esp_image: segment 4: paddr=00133954 vaddr=40375604 size=18da0h (101792) load[0m
+[0;32mI (319) esp_image: segment 5: paddr=0014c6fc vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (330) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (330) boot: Disabling RNG early entropy source...[0m
+[0;32mI (340) cpu_start: Multicore app[0m
+[0;32mI (349) cpu_start: Pro cpu start user code[0m
+[0;32mI (350) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (350) app_init: Application information:[0m
+[0;32mI (350) app_init: Project name:     cont_esp[0m
+[0;32mI (354) app_init: App version:      400099d1-dirty[0m
+[0;32mI (358) app_init: Compile time:     Apr 17 2026 09:40:34[0m
+[0;32mI (363) app_init: ELF file SHA256:  4198b2b38...[0m
+[0;32mI (367) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (371) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (375) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (379) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (383) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (389) heap_init: At 3FCB76E0 len 00032030 (200 KiB): RAM[0m
+[0;32mI (394) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (399) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (405) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (411) spi_flash: detected chip: gd[0m
+[0;32mI (413) spi_flash: flash io: dio[0m
+[0;33mW (416) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (428) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (438) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (445) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (451) main_task: Started on CPU0[0m
+[0;32mI (461) main_task: Calling app_main()[0m
+[0;32mI (481) pp: pp rom version: e7ae62f[0m
+[0;32mI (481) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (491) wifi:wifi driver task: 3fced4e4, prio:23, stack:6656, core=0[0m
+[0;32mI (501) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (501) wifi:wifi certification version: v7.0[0m
+[0;32mI (501) wifi:config NVS flash: enabled[0m
+[0;32mI (501) wifi:config nano formatting: disabled[0m
+[0;32mI (501) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (511) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (511) wifi:Init management short buffer num: 32[0m
+[0;32mI (511) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (521) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (521) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (531) wifi:Init static rx buffer num: 10[0m
+[0;32mI (531) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (541) wifi_init: rx ba win: 6[0m
+[0;32mI (541) wifi_init: accept mbox: 6[0m
+[0;32mI (541) wifi_init: tcpip mbox: 32[0m
+[0;32mI (541) wifi_init: udp mbox: 6[0m
+[0;32mI (551) wifi_init: tcp mbox: 6[0m
+[0;32mI (551) wifi_init: tcp tx win: 5760[0m
+[0;32mI (551) wifi_init: tcp rx win: 5760[0m
+[0;32mI (561) wifi_init: tcp mss: 1440[0m
+[0;32mI (561) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (561) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (571) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (611) wifi:mode : sta (7c:2c:67:9a:56:48)[0m
+[0;32mI (611) wifi:enable tsf[0m
+[0;32mI (611) TRANSMIT: Wi-Fi STA started[0m
+[0;32mI (611) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (611) TRANSMIT: ESP-NOW transmit initialized on channel 1[0m
+[0;32mI (611) PACE_UI: Turn off LCD backlight[0m
+[0;32mI (621) PACE_UI: Initialize SPI bus[0m
+[0;32mI (621) PACE_UI: Install panel IO[0m
+[0;32mI (621) PACE_UI: Install ILI9341 panel driver[0m
+[0;32mI (631) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (751) PACE_UI: Turn on LCD backlight[0m
+[0;32mI (751) PACE_UI: Initialize LVGL[0m
+[0;32mI (751) LVGL: Starting LVGL task[0m
+[0;32mI (791) PACE_UI: Initializing touch[0m
+[0;32mI (791) PACE_UI: GT911 found at 0x5D[0m
+[0;32mI (851) GT911: I2C address initialization procedure skipped - using default GT9xx setup[0m
+[0;32mI (851) GT911: TouchPad_ID:0x39,0x31,0x31[0m
+[0;32mI (851) GT911: TouchPad_Config_Version:65[0m
+[0;32mI (851) PACE_UI: Touch registered with LVGL[0m
+[0;32mI (941) MAIN: System ready[0m
+[0;32mI (941) smart_car_controller: Waiting for IP (STA association + DHCP)...[0m
+[0;32mI (941) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (941) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (981) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (981) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (981) wifi:connected with DukeVisitor, aid = 2, channel 1, BW20, bssid = 00:a3:8e:06:85:a5[0m
+[0;32mI (981) wifi:security: Open Auth, phy: bgn, rssi: -54[0m
+[0;32mI (991) wifi:pm start, type: 1[0m
+
+[0;32mI (991) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1001) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (1011) wifi:<ba-add>idx:0 (ifx:0, 00:a3:8e:06:85:a5), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1011) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2331) esp_netif_handlers: sta ip: 172.28.59.248, mask: 255.255.0.0, gw: 172.28.0.1[0m
+[0;32mI (2331) smart_car_controller: Wi-Fi connected, IP obtained[0m
+[0;32mI (11211) MAIN: SENDING START[0m
+[1;31mE (11251) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (11251) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (11251) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11261) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (11261) MAIN: Start pressed with pace 6:00 (t_start=10855768 us)[0m
+[0;32mI (11271) TRANSMIT: Sent ints: 6, 0 (ACKs: 0/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (11321) TRANSMIT: ACK received (1/3)[0m
+[0;32mI (16321) TRANSMIT: Sent ints: 6, 0 (ACKs: 1/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (16371) TRANSMIT: ACK received (2/3)[0m
+[0;32mI (18061) MAIN: Stop requested (t_stop=17649535 us)[0m
+[0;32mI (18061) MAIN: SENDING STOP[0m
+[1;31mE (18101) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (18101) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18101) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (18111) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (18121) TRANSMIT: Transmission stopped during retry delay[0m
+[0;32mI (18121) MAIN: Sending stop pace 0:00[0m
+[0;33mW (18121) ESPNOW: Peer exists. Please call API esp_now_mod_peer()![0m
+[0;32mI (18131) TRANSMIT: Sent ints: 0, 0 (ACKs: 0/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (18141) TRANSMIT: ACK received (1/3)[0m
+[0;32mI (23141) TRANSMIT: Sent ints: 0, 0 (ACKs: 1/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (23191) TRANSMIT: ACK received (2/3)[0m
+[0;32mI (28191) TRANSMIT: Sent ints: 0, 0 (ACKs: 2/3)[0m
+ESP-NOW send to 24:EC:4A:52:C3:64 -> OK
+ACK received from 24:EC:4A:52:C3:64: OK
+[0;32mI (28241) TRANSMIT: ACK received (3/3)[0m
+[0;32mI (33241) TRANSMIT: Finished transmit loop[0m
+[0;32mI (33241) TRANSMIT: Finished: received 100 ACKs[0m

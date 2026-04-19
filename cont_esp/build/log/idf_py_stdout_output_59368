@@ -1,0 +1,1611 @@
+Command: /Users/neylakirby/.espressif/python_env/idf5.5_py3.12_env/bin/python /Users/neylakirby/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem2101 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/neylakirby/repos/smart-pacer/cont_esp/build/cont_esp.elf /Users/neylakirby/repos/smart-pacer/cont_esp/build/bootloader/bootloader.elf -m '/Users/neylakirby/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/Users/neylakirby/esp/esp-idf/tools/idf.py' '-p' '/dev/cu.usbmodem2101'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037bcea
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (18) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (18) boot: compile time Apr 17 2026 09:40:55[0m
+[0;32mI (18) boot: Multicore bootloader[0m
+[0;32mI (18) boot: chip revision: v0.2[0m
+[0;32mI (21) boot: efuse block revision: v1.3[0m
+[0;32mI (24) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (28) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (32) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (40) boot: Partition Table:[0m
+[0;32mI (43) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (49) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (56) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (62) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (69) boot: End of partition table[0m
+[0;32mI (72) esp_image: segment 0: paddr=00010020 vaddr=3c0f0020 size=28ac0h (166592) map[0m
+[0;32mI (109) esp_image: segment 1: paddr=00038ae8 vaddr=3fc9e400 size=04bf8h ( 19448) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0003d6e8 vaddr=40374000 size=02930h ( 10544) load[0m
+[0;32mI (116) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=eeb18h (977688) map[0m
+[0;32mI (292) esp_image: segment 4: paddr=0012eb40 vaddr=40376930 size=17a38h ( 96824) load[0m
+[0;32mI (314) esp_image: segment 5: paddr=00146580 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (324) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (324) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) app_init: Application information:[0m
+[0;32mI (344) app_init: Project name:     cont_esp[0m
+[0;32mI (348) app_init: App version:      400099d1-dirty[0m
+[0;32mI (353) app_init: Compile time:     Apr 17 2026 09:40:34[0m
+[0;32mI (358) app_init: ELF file SHA256:  aec078f5b...[0m
+[0;32mI (362) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (366) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (369) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (373) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (377) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (384) heap_init: At 3FCB7688 len 00032088 (200 KiB): RAM[0m
+[0;32mI (389) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (394) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (399) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (405) spi_flash: detected chip: gd[0m
+[0;32mI (408) spi_flash: flash io: dio[0m
+[0;33mW (411) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (423) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (433) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (439) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (446) main_task: Started on CPU0[0m
+[0;32mI (456) main_task: Calling app_main()[0m
+[0;32mI (476) pp: pp rom version: e7ae62f[0m
+[0;32mI (476) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (486) wifi:wifi driver task: 3fceeb88, prio:23, stack:6656, core=0[0m
+[0;32mI (496) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (496) wifi:wifi certification version: v7.0[0m
+[0;32mI (496) wifi:config NVS flash: enabled[0m
+[0;32mI (496) wifi:config nano formatting: disabled[0m
+[0;32mI (496) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (506) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (506) wifi:Init management short buffer num: 32[0m
+[0;32mI (506) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (516) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (516) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (526) wifi:Init static rx buffer num: 10[0m
+[0;32mI (526) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (536) wifi_init: rx ba win: 6[0m
+[0;32mI (536) wifi_init: accept mbox: 6[0m
+[0;32mI (536) wifi_init: tcpip mbox: 32[0m
+[0;32mI (536) wifi_init: udp mbox: 6[0m
+[0;32mI (546) wifi_init: tcp mbox: 6[0m
+[0;32mI (546) wifi_init: tcp tx win: 5760[0m
+[0;32mI (546) wifi_init: tcp rx win: 5760[0m
+[0;32mI (556) wifi_init: tcp mss: 1440[0m
+[0;32mI (556) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (556) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (566) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (606) wifi:mode : sta (7c:2c:67:9a:56:48)[0m
+[0;32mI (606) wifi:enable tsf[0m
+[0;32mI (606) TRANSMIT: Wi-Fi STA started[0m
+[0;32mI (606) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (606) TRANSMIT: ESP-NOW transmit initialized on channel 1[0m
+[0;32mI (606) PACE_UI: Turn off LCD backlight[0m
+[0;32mI (616) PACE_UI: Initialize SPI bus[0m
+[0;32mI (616) PACE_UI: Install panel IO[0m
+[0;32mI (616) PACE_UI: Install ILI9341 panel driver[0m
+[0;32mI (626) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (746) PACE_UI: Turn on LCD backlight[0m
+[0;32mI (746) PACE_UI: Initialize LVGL[0m
+[0;32mI (746) LVGL: Starting LVGL task[0m
+[0;32mI (786) PACE_UI: Initializing touch[0m
+[0;32mI (786) PACE_UI: GT911 found at 0x14[0m
+[0;32mI (846) GT911: I2C address initialization procedure skipped - using default GT9xx setup[0m
+[1;31mE (846) lcd_panel.io.i2c: panel_io_i2c_rx_buffer(140): i2c transaction failed[0m
+[1;31mE (846) GT911: touch_gt911_read_cfg(419): GT911 read error![0m
+[1;31mE (846) GT911: esp_lcd_touch_new_i2c_gt911(169): GT911 init failed[0m
+[1;31mE (856) GT911: Error (0xffffffff)! Touch controller GT911 initialization failed![0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x4204a13f
+file: "/Users/neylakirby/repos/smart-pacer/shared_components/common_code/ui.c" line 236
+func: ui_touch_init
+expression: esp_lcd_touch_new_i2c_gt911(tp_io_handle, &tp_cfg, &s_tp_handle)
+
+abort() was called at PC 0x4037ea83 on core 0
+
+
+Backtrace: 0x40375e31:0x3fcbacf0 0x4037ea8d:0x3fcbad10 0x4038806d:0x3fcbad30 0x4037ea83:0x3fcbada0 0x4204a13f:0x3fcbadd0 0x4204a35c:0x3fcbae70 0x4200a976:0x3fcbae90 0x420ed934:0x3fcbaeb0 0x4037f55d:0x3fcbaee0
+
+
+
+
+ELF file SHA256: aec078f5b
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40375d70
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (18) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (18) boot: compile time Apr 17 2026 09:40:55[0m
+[0;32mI (18) boot: Multicore bootloader[0m
+[0;32mI (18) boot: chip revision: v0.2[0m
+[0;32mI (21) boot: efuse block revision: v1.3[0m
+[0;32mI (24) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (28) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (32) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (40) boot: Partition Table:[0m
+[0;32mI (43) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (49) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (56) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (62) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (69) boot: End of partition table[0m
+[0;32mI (72) esp_image: segment 0: paddr=00010020 vaddr=3c0f0020 size=28ac0h (166592) map[0m
+[0;32mI (109) esp_image: segment 1: paddr=00038ae8 vaddr=3fc9e400 size=04bf8h ( 19448) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0003d6e8 vaddr=40374000 size=02930h ( 10544) load[0m
+[0;32mI (116) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=eeb18h (977688) map[0m
+[0;32mI (293) esp_image: segment 4: paddr=0012eb40 vaddr=40376930 size=17a38h ( 96824) load[0m
+[0;32mI (314) esp_image: segment 5: paddr=00146580 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (324) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (324) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) app_init: Application information:[0m
+[0;32mI (344) app_init: Project name:     cont_esp[0m
+[0;32mI (348) app_init: App version:      400099d1-dirty[0m
+[0;32mI (353) app_init: Compile time:     Apr 17 2026 09:40:34[0m
+[0;32mI (358) app_init: ELF file SHA256:  aec078f5b...[0m
+[0;32mI (362) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (366) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (369) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (373) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (377) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (384) heap_init: At 3FCB7688 len 00032088 (200 KiB): RAM[0m
+[0;32mI (389) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (394) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (399) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (405) spi_flash: detected chip: gd[0m
+[0;32mI (408) spi_flash: flash io: dio[0m
+[0;33mW (411) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (423) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (433) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (439) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (446) main_task: Started on CPU0[0m
+[0;32mI (456) main_task: Calling app_main()[0m
+[0;32mI (476) pp: pp rom version: e7ae62f[0m
+[0;32mI (476) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (486) wifi:wifi driver task: 3fceeb88, prio:23, stack:6656, core=0[0m
+[0;32mI (496) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (496) wifi:wifi certification version: v7.0[0m
+[0;32mI (496) wifi:config NVS flash: enabled[0m
+[0;32mI (496) wifi:config nano formatting: disabled[0m
+[0;32mI (496) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (506) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (506) wifi:Init management short buffer num: 32[0m
+[0;32mI (506) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (516) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (516) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (526) wifi:Init static rx buffer num: 10[0m
+[0;32mI (526) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (536) wifi_init: rx ba win: 6[0m
+[0;32mI (536) wifi_init: accept mbox: 6[0m
+[0;32mI (536) wifi_init: tcpip mbox: 32[0m
+[0;32mI (536) wifi_init: udp mbox: 6[0m
+[0;32mI (546) wifi_init: tcp mbox: 6[0m
+[0;32mI (546) wifi_init: tcp tx win: 5760[0m
+[0;32mI (546) wifi_init: tcp rx win: 5760[0m
+[0;32mI (556) wifi_init: tcp mss: 1440[0m
+[0;32mI (556) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (556) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (566) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (606) wifi:mode : sta (7c:2c:67:9a:56:48)[0m
+[0;32mI (606) wifi:enable tsf[0m
+[0;32mI (606) TRANSMIT: Wi-Fi STA started[0m
+[0;32mI (606) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (606) TRANSMIT: ESP-NOW transmit initialized on channel 1[0m
+[0;32mI (616) PACE_UI: Turn off LCD backlight[0m
+[0;32mI (616) PACE_UI: Initialize SPI bus[0m
+[0;32mI (616) PACE_UI: Install panel IO[0m
+[0;32mI (626) PACE_UI: Install ILI9341 panel driver[0m
+[0;32mI (626) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (746) PACE_UI: Turn on LCD backlight[0m
+[0;32mI (746) PACE_UI: Initialize LVGL[0m
+[0;32mI (746) LVGL: Starting LVGL task[0m
+[0;32mI (786) PACE_UI: Initializing touch[0m
+[0;32mI (786) PACE_UI: GT911 found at 0x5D[0m
+[0;32mI (846) GT911: I2C address initialization procedure skipped - using default GT9xx setup[0m
+[0;32mI (846) GT911: TouchPad_ID:0x39,0x31,0x31[0m
+[0;32mI (846) GT911: TouchPad_Config_Version:65[0m
+[0;32mI (846) PACE_UI: Touch registered with LVGL[0m
+[0;32mI (936) MAIN: System ready[0m
+[0;32mI (936) MAIN: REACHABLE[0m
+[0;32mI (936) MAIN: UNREACHABLE[0m
+[1;31mE (936) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (936) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (936) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (946) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (1046) MAIN: UNREACHABLE[0m
+[1;31mE (1046) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (1046) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (1046) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (1046) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (1156) MAIN: UNREACHABLE[0m
+[1;31mE (1156) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (1156) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (1156) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (1156) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (1266) MAIN: UNREACHABLE[0m
+[1;31mE (1266) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (1266) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (1266) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (1266) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (1376) MAIN: UNREACHABLE[0m
+[1;31mE (1376) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (1376) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (1376) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (1376) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (1486) MAIN: UNREACHABLE[0m
+[1;31mE (1486) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (1486) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (1486) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (1486) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (1596) MAIN: UNREACHABLE[0m
+[1;31mE (1596) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (1596) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (1596) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (1596) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (1706) MAIN: UNREACHABLE[0m
+[1;31mE (1706) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (1706) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (1706) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (1706) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (1816) MAIN: UNREACHABLE[0m
+[1;31mE (1816) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (1816) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (1816) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (1816) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (1926) MAIN: UNREACHABLE[0m
+[1;31mE (1926) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (1926) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (1926) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (1926) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (2036) MAIN: UNREACHABLE[0m
+[1;31mE (2036) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (2036) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (2036) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (2036) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (2146) MAIN: UNREACHABLE[0m
+[1;31mE (2146) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (2146) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (2146) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (2146) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (2256) MAIN: UNREACHABLE[0m
+[1;31mE (2256) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (2256) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (2256) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (2256) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (2366) MAIN: UNREACHABLE[0m
+[1;31mE (2366) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (2366) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (2366) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (2366) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (2476) MAIN: UNREACHABLE[0m
+[1;31mE (2476) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (2476) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (2476) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (2476) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (2586) MAIN: UNREACHABLE[0m
+[1;31mE (2586) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (2586) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (2586) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (2586) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (2696) MAIN: UNREACHABLE[0m
+[1;31mE (2696) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (2696) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (2696) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (2696) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (2806) MAIN: UNREACHABLE[0m
+[1;31mE (2806) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (2806) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (2806) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (2806) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (2916) MAIN: UNREACHABLE[0m
+[1;31mE (2916) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (2916) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (2916) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (2916) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (3026) MAIN: UNREACHABLE[0m
+[1;31mE (3026) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (3026) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (3026) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (3026) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (3136) MAIN: UNREACHABLE[0m
+[1;31mE (3136) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (3136) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (3136) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (3136) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (3246) MAIN: UNREACHABLE[0m
+[1;31mE (3246) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (3246) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (3246) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (3246) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (3356) MAIN: UNREACHABLE[0m
+[1;31mE (3356) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (3356) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (3356) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (3356) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (3466) MAIN: UNREACHABLE[0m
+[1;31mE (3466) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (3466) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (3466) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (3466) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (3576) MAIN: UNREACHABLE[0m
+[1;31mE (3576) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (3576) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (3576) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (3576) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (3686) MAIN: UNREACHABLE[0m
+[1;31mE (3686) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (3686) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (3686) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (3686) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (3796) MAIN: UNREACHABLE[0m
+[1;31mE (3796) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (3796) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (3796) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (3796) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (3906) MAIN: UNREACHABLE[0m
+[1;31mE (3906) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (3906) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (3906) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (3906) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (4016) MAIN: UNREACHABLE[0m
+[1;31mE (4016) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (4016) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (4016) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (4016) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (4126) MAIN: UNREACHABLE[0m
+[1;31mE (4126) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (4126) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (4126) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (4126) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (4236) MAIN: UNREACHABLE[0m
+[1;31mE (4236) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (4236) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (4236) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (4236) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (4346) MAIN: UNREACHABLE[0m
+[1;31mE (4346) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (4346) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (4346) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (4346) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (4456) MAIN: UNREACHABLE[0m
+[1;31mE (4456) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (4456) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (4456) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (4456) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (4566) MAIN: UNREACHABLE[0m
+[1;31mE (4566) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (4566) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (4566) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (4566) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (4676) MAIN: UNREACHABLE[0m
+[1;31mE (4676) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (4676) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (4676) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (4676) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (4786) MAIN: UNREACHABLE[0m
+[1;31mE (4786) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (4786) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (4786) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (4786) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (4896) MAIN: UNREACHABLE[0m
+[1;31mE (4896) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (4896) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (4896) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (4896) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (5006) MAIN: UNREACHABLE[0m
+[1;31mE (5006) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (5006) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (5006) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (5006) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (5116) MAIN: UNREACHABLE[0m
+[1;31mE (5116) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (5116) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (5116) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (5116) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (5226) MAIN: UNREACHABLE[0m
+[1;31mE (5226) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (5226) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (5226) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (5226) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (5336) MAIN: UNREACHABLE[0m
+[1;31mE (5336) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (5336) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (5336) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (5336) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (5446) MAIN: UNREACHABLE[0m
+[1;31mE (5446) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (5446) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (5446) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (5446) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (5556) MAIN: UNREACHABLE[0m
+[1;31mE (5556) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (5556) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (5556) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (5556) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (5666) MAIN: UNREACHABLE[0m
+[1;31mE (5666) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (5666) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (5666) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (5666) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (5776) MAIN: UNREACHABLE[0m
+[1;31mE (5776) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (5776) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (5776) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (5776) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (5886) MAIN: UNREACHABLE[0m
+[1;31mE (5886) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (5886) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (5886) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (5886) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (5996) MAIN: UNREACHABLE[0m
+[1;31mE (5996) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (5996) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (5996) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (5996) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6106) MAIN: UNREACHABLE[0m
+[1;31mE (6106) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (6106) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (6106) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6106) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6216) MAIN: UNREACHABLE[0m
+[1;31mE (6216) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (6216) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (6216) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6216) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6326) MAIN: UNREACHABLE[0m
+[1;31mE (6326) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (6326) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (6326) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6326) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6436) MAIN: UNREACHABLE[0m
+[1;31mE (6436) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (6436) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (6436) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6436) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6546) MAIN: UNREACHABLE[0m
+[1;31mE (6546) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (6546) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (6546) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6546) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6656) MAIN: UNREACHABLE[0m
+[1;31mE (6656) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (6656) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (6656) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6656) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6766) MAIN: UNREACHABLE[0m
+[1;31mE (6766) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (6766) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (6766) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6766) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6876) MAIN: UNREACHABLE[0m
+[1;31mE (6876) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (6876) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (6876) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6876) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6986) MAIN: UNREACHABLE[0m
+[1;31mE (6986) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (6986) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (6986) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6986) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7096) MAIN: UNREACHABLE[0m
+[1;31mE (7096) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (7096) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (7096) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7096) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7206) MAIN: UNREACHABLE[0m
+[1;31mE (7206) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (7206) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (7206) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7206) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7316) MAIN: UNREACHABLE[0m
+[1;31mE (7316) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (7316) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (7316) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7316) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7426) MAIN: UNREACHABLE[0m
+[1;31mE (7426) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (7426) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (7426) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7426) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7536) MAIN: UNREACHABLE[0m
+[1;31mE (7536) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (7536) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (7536) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7536) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7646) MAIN: UNREACHABLE[0m
+[1;31mE (7646) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (7646) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (7646) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7646) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7756) MAIN: UNREACHABLE[0m
+[1;31mE (7756) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (7756) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (7756) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7756) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7866) MAIN: UNREACHABLE[0m
+[1;31mE (7866) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (7866) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (7866) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7866) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7976) MAIN: UNREACHABLE[0m
+[1;31mE (7976) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (7976) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (7976) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7976) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (8086) MAIN: UNREACHABLE[0m
+[1;31mE (8086) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (8086) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (8086) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8086) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (8196) MAIN: UNREACHABLE[0m
+[1;31mE (8196) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (8196) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (8196) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8196) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (8306) MAIN: UNREACHABLE[0m
+[1;31mE (8306) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (8306) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (8306) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8306) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (8416) MAIN: UNREACHABLE[0m
+[1;31mE (8416) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (8416) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (8416) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8416) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (8526) MAIN: UNREACHABLE[0m
+[1;31mE (8526) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (8526) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (8526) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8526) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (8636) MAIN: UNREACHABLE[0m
+[1;31mE (8636) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (8636) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (8636) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8636) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (8746) MAIN: UNREACHABLE[0m
+[1;31mE (8746) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (8746) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (8746) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8746) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (8856) MAIN: UNREACHABLE[0m
+[1;31mE (8856) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (8856) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (8856) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8856) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (8966) MAIN: UNREACHABLE[0m
+[1;31mE (8966) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (8966) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (8966) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8966) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (9076) MAIN: UNREACHABLE[0m
+[1;31mE (9076) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (9076) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (9076) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9076) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (9186) MAIN: UNREACHABLE[0m
+[1;31mE (9186) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (9186) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (9186) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9186) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (9296) MAIN: UNREACHABLE[0m
+[1;31mE (9296) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (9296) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (9296) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9296) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (9406) MAIN: UNREACHABLE[0m
+[1;31mE (9406) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (9406) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (9406) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9406) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (9516) MAIN: UNREACHABLE[0m
+[1;31mE (9516) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (9516) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (9516) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9516) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (9626) MAIN: UNREACHABLE[0m
+[1;31mE (9626) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (9626) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (9626) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9626) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (9736) MAIN: UNREACHABLE[0m
+[1;31mE (9736) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (9736) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (9736) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9736) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (9846) MAIN: UNREACHABLE[0m
+[1;31mE (9846) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (9846) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (9846) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9846) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (9956) MAIN: UNREACHABLE[0m
+[1;31mE (9956) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (9956) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (9956) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9956) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (10066) MAIN: UNREACHABLE[0m
+[1;31mE (10066) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (10066) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (10066) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10066) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (10176) MAIN: UNREACHABLE[0m
+[1;31mE (10176) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (10176) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (10176) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10176) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (10286) MAIN: UNREACHABLE[0m
+[1;31mE (10286) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (10286) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (10286) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10286) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (10396) MAIN: UNREACHABLE[0m
+[1;31mE (10396) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (10396) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (10396) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10396) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (10506) MAIN: UNREACHABLE[0m
+[1;31mE (10506) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (10506) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (10506) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10506) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (10616) MAIN: UNREACHABLE[0m
+[1;31mE (10616) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (10616) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (10616) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10616) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (10726) MAIN: UNREACHABLE[0m
+[1;31mE (10726) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (10726) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (10726) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10726) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (10836) MAIN: UNREACHABLE[0m
+[1;31mE (10836) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (10836) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (10836) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10836) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (10946) MAIN: UNREACHABLE[0m
+[1;31mE (10946) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (10946) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (10946) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10946) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (11056) MAIN: UNREACHABLE[0m
+[1;31mE (11056) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (11056) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (11056) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11056) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (11166) MAIN: UNREACHABLE[0m
+[1;31mE (11166) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (11166) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (11166) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11166) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (11276) MAIN: UNREACHABLE[0m
+[1;31mE (11276) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (11276) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (11276) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11276) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (11386) MAIN: UNREACHABLE[0m
+[1;31mE (11386) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (11386) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (11386) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11386) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (11496) MAIN: UNREACHABLE[0m
+[1;31mE (11496) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (11496) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (11496) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11496) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (11606) MAIN: UNREACHABLE[0m
+[1;31mE (11606) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (11606) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (11606) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11606) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (11716) MAIN: UNREACHABLE[0m
+[1;31mE (11716) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (11716) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (11716) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11716) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (11826) MAIN: UNREACHABLE[0m
+[1;31mE (11826) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (11826) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (11826) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11826) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (11936) MAIN: UNREACHABLE[0m
+[1;31mE (11936) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (11936) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (11936) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11936) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (12046) MAIN: UNREACHABLE[0m
+[1;31mE (12046) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (12046) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (12046) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12046) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (12156) MAIN: UNREACHABLE[0m
+[1;31mE (12156) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (12156) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (12156) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12156) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (12266) MAIN: UNREACHABLE[0m
+[1;31mE (12266) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (12266) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (12266) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12266) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (12376) MAIN: UNREACHABLE[0m
+[1;31mE (12376) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (12376) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (12376) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12376) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (12486) MAIN: UNREACHABLE[0m
+[1;31mE (12486) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (12486) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (12486) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12486) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (12596) MAIN: UNREACHABLE[0m
+[1;31mE (12596) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (12596) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (12596) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12596) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (12706) MAIN: UNREACHABLE[0m
+[1;31mE (12706) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (12706) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (12706) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12706) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (12816) MAIN: UNREACHABLE[0m
+[1;31mE (12816) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (12816) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (12816) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12816) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (12926) MAIN: UNREACHABLE[0m
+[1;31mE (12926) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (12926) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (12926) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12926) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (13036) MAIN: UNREACHABLE[0m
+[1;31mE (13036) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (13036) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (13036) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (13036) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (13146) MAIN: UNREACHABLE[0m
+[1;31mE (13146) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (13146) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (13146) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (13146) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (13256) MAIN: UNREACHABLE[0m
+[1;31mE (13256) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (13256) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (13256) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (13256) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (13366) MAIN: UNREACHABLE[0m
+[1;31mE (13366) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (13366) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (13366) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (13366) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (13476) MAIN: UNREACHABLE[0m
+[1;31mE (13476) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (13476) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (13476) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (13476) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (13586) MAIN: UNREACHABLE[0m
+[1;31mE (13586) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (13586) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (13586) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (13586) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (13696) MAIN: UNREACHABLE[0m
+[1;31mE (13696) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (13696) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (13696) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (13696) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (13806) MAIN: UNREACHABLE[0m
+[1;31mE (13806) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (13806) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (13806) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (13806) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (13916) MAIN: UNREACHABLE[0m
+[1;31mE (13916) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (13916) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (13916) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (13916) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (14026) MAIN: UNREACHABLE[0m
+[1;31mE (14026) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (14026) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (14026) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (14026) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (14136) MAIN: UNREACHABLE[0m
+[1;31mE (14136) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (14136) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (14136) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (14136) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (14246) MAIN: UNREACHABLE[0m
+[1;31mE (14246) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (14246) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (14246) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (14246) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (14356) MAIN: UNREACHABLE[0m
+[1;31mE (14356) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (14356) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (14356) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (14356) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (14466) MAIN: UNREACHABLE[0m
+[1;31mE (14466) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (14466) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (14466) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (14466) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (14576) MAIN: UNREACHABLE[0m
+[1;31mE (14576) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (14576) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (14576) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (14576) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (14686) MAIN: UNREACHABLE[0m
+[1;31mE (14686) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (14686) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (14686) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (14686) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (14796) MAIN: UNREACHABLE[0m
+[1;31mE (14796) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (14796) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (14796) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (14796) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (14906) MAIN: UNREACHABLE[0m
+[1;31mE (14906) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (14906) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (14906) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (14906) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (15016) MAIN: UNREACHABLE[0m
+[1;31mE (15016) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15016) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15016) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (15016) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (15126) MAIN: UNREACHABLE[0m
+[1;31mE (15126) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15126) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15126) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (15126) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (15236) MAIN: UNREACHABLE[0m
+[1;31mE (15236) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15236) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15236) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (15236) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (15346) MAIN: UNREACHABLE[0m
+[1;31mE (15346) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15346) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15346) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (15346) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (15456) MAIN: UNREACHABLE[0m
+[1;31mE (15456) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15456) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15456) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (15456) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (15566) MAIN: UNREACHABLE[0m
+[1;31mE (15566) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15566) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15566) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (15566) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (15676) MAIN: UNREACHABLE[0m
+[1;31mE (15676) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15676) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15676) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (15676) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (15786) MAIN: UNREACHABLE[0m
+[1;31mE (15786) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15786) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15786) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (15786) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (15896) MAIN: UNREACHABLE[0m
+[1;31mE (15896) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15896) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15896) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (15896) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (16006) MAIN: UNREACHABLE[0m
+[1;31mE (16006) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16006) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16006) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (16006) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (16116) MAIN: UNREACHABLE[0m
+[1;31mE (16116) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16116) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16116) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (16116) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (16226) MAIN: UNREACHABLE[0m
+[1;31mE (16226) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16226) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16226) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (16226) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (16336) MAIN: UNREACHABLE[0m
+[1;31mE (16336) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16336) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16336) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (16336) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (16446) MAIN: UNREACHABLE[0m
+[1;31mE (16446) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16446) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16446) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (16446) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (16556) MAIN: UNREACHABLE[0m
+[1;31mE (16556) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16556) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16556) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (16556) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (16666) MAIN: UNREACHABLE[0m
+[1;31mE (16666) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16666) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16666) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (16666) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (16776) MAIN: UNREACHABLE[0m
+[1;31mE (16776) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16776) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16776) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (16776) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (16886) MAIN: UNREACHABLE[0m
+[1;31mE (16886) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16886) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16886) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (16886) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (16996) MAIN: UNREACHABLE[0m
+[1;31mE (16996) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16996) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16996) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (16996) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (17106) MAIN: UNREACHABLE[0m
+[1;31mE (17106) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17106) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17106) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (17106) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (17216) MAIN: UNREACHABLE[0m
+[1;31mE (17216) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17216) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17216) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (17216) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (17326) MAIN: UNREACHABLE[0m
+[1;31mE (17326) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17326) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17326) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (17326) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (17436) MAIN: UNREACHABLE[0m
+[1;31mE (17436) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17436) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17436) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (17436) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (17546) MAIN: UNREACHABLE[0m
+[1;31mE (17546) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17546) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17546) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (17546) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (17656) MAIN: UNREACHABLE[0m
+[1;31mE (17656) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17656) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17656) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (17656) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (17766) MAIN: UNREACHABLE[0m
+[1;31mE (17766) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17766) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17766) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (17766) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (17876) MAIN: UNREACHABLE[0m
+[1;31mE (17876) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17876) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17876) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (17876) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (17986) MAIN: UNREACHABLE[0m
+[1;31mE (17986) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17986) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17986) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (17986) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (18096) MAIN: UNREACHABLE[0m
+[1;31mE (18096) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18096) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18096) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (18096) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (18206) MAIN: UNREACHABLE[0m
+[1;31mE (18206) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18206) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18206) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (18206) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (18316) MAIN: UNREACHABLE[0m
+[1;31mE (18316) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18316) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18316) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (18316) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (18426) MAIN: UNREACHABLE[0m
+[1;31mE (18426) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18426) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18426) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (18426) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (18536) MAIN: UNREACHABLE[0m
+[1;31mE (18536) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18536) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18536) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (18536) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (18646) MAIN: UNREACHABLE[0m
+[1;31mE (18646) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18646) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18646) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (18646) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (18756) MAIN: UNREACHABLE[0m
+[1;31mE (18756) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18756) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18756) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (18756) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (18866) MAIN: UNREACHABLE[0m
+[1;31mE (18866) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18866) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18866) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (18866) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (18976) MAIN: UNREACHABLE[0m
+[1;31mE (18976) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18976) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18976) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (18976) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (19086) MAIN: UNREACHABLE[0m
+[1;31mE (19086) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19086) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19086) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (19086) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (19196) MAIN: UNREACHABLE[0m
+[1;31mE (19196) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19196) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19196) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (19196) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (19306) MAIN: UNREACHABLE[0m
+[1;31mE (19306) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19306) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19306) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (19306) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (19416) MAIN: UNREACHABLE[0m
+[1;31mE (19416) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19416) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19416) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (19416) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (19526) MAIN: UNREACHABLE[0m
+[1;31mE (19526) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19526) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19526) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (19526) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (19636) MAIN: UNREACHABLE[0m
+[1;31mE (19636) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19636) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19636) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (19636) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (19746) MAIN: UNREACHABLE[0m
+[1;31mE (19746) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19746) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19746) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (19746) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (19856) MAIN: UNREACHABLE[0m
+[1;31mE (19856) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19856) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19856) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (19856) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (19966) MAIN: UNREACHABLE[0m
+[1;31mE (19966) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19966) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19966) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (19966) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (20076) MAIN: UNREACHABLE[0m
+[1;31mE (20076) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20076) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20076) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (20076) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (20186) MAIN: UNREACHABLE[0m
+[1;31mE (20186) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20186) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20186) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (20186) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (20296) MAIN: UNREACHABLE[0m
+[1;31mE (20296) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20296) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20296) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (20296) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (20406) MAIN: UNREACHABLE[0m
+[1;31mE (20406) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20406) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20406) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (20406) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (20516) MAIN: UNREACHABLE[0m
+[1;31mE (20516) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20516) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20516) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (20516) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (20626) MAIN: UNREACHABLE[0m
+[1;31mE (20626) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20626) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20626) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (20626) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (20736) MAIN: UNREACHABLE[0m
+[1;31mE (20736) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20736) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20736) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (20736) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (20846) MAIN: UNREACHABLE[0m
+[1;31mE (20846) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20846) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20846) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (20846) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (20956) MAIN: UNREACHABLE[0m
+[1;31mE (20956) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20956) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20956) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (20956) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (21066) MAIN: UNREACHABLE[0m
+[1;31mE (21066) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21066) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21066) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (21066) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (21176) MAIN: UNREACHABLE[0m
+[1;31mE (21176) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21176) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21176) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (21176) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (21286) MAIN: UNREACHABLE[0m
+[1;31mE (21286) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21286) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21286) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (21286) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (21396) MAIN: UNREACHABLE[0m
+[1;31mE (21396) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21396) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21396) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (21396) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (21506) MAIN: UNREACHABLE[0m
+[1;31mE (21506) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21506) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21506) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (21506) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (21616) MAIN: UNREACHABLE[0m
+[1;31mE (21616) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21616) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21616) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (21616) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (21726) MAIN: UNREACHABLE[0m
+[1;31mE (21726) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21726) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21726) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (21726) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (21836) MAIN: UNREACHABLE[0m
+[1;31mE (21836) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21836) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21836) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (21836) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (21946) MAIN: UNREACHABLE[0m
+[1;31mE (21946) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21946) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21946) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (21946) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (22056) MAIN: UNREACHABLE[0m
+[1;31mE (22056) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22056) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22056) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (22056) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (22166) MAIN: UNREACHABLE[0m
+[1;31mE (22166) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22166) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22166) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (22166) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (22276) MAIN: UNREACHABLE[0m
+[1;31mE (22276) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22276) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22276) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (22276) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (22386) MAIN: UNREACHABLE[0m
+[1;31mE (22386) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22386) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22386) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (22386) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (22496) MAIN: UNREACHABLE[0m
+[1;31mE (22496) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22496) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22496) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (22496) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (22606) MAIN: UNREACHABLE[0m
+[1;31mE (22606) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22606) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22606) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (22606) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (22716) MAIN: UNREACHABLE[0m
+[1;31mE (22716) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22716) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22716) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (22716) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (22826) MAIN: UNREACHABLE[0m
+[1;31mE (22826) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22826) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22826) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (22826) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (22936) MAIN: UNREACHABLE[0m
+[1;31mE (22936) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22936) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22936) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (22936) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (23046) MAIN: UNREACHABLE[0m
+[1;31mE (23046) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23046) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23046) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (23046) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (23156) MAIN: UNREACHABLE[0m
+[1;31mE (23156) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23156) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23156) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (23156) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (23266) MAIN: UNREACHABLE[0m
+[1;31mE (23266) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23266) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23266) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (23266) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (23376) MAIN: UNREACHABLE[0m
+[1;31mE (23376) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23376) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23376) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (23376) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (23486) MAIN: UNREACHABLE[0m
+[1;31mE (23486) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23486) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23486) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (23486) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (23596) MAIN: UNREACHABLE[0m
+[1;31mE (23596) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23596) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23596) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (23596) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (23706) MAIN: UNREACHABLE[0m
+[1;31mE (23706) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23706) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23706) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (23706) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (23816) MAIN: UNREACHABLE[0m
+[1;31mE (23816) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23816) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23816) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (23816) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (23926) MAIN: UNREACHABLE[0m
+[1;31mE (23926) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23926) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23926) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (23926) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (24036) MAIN: UNREACHABLE[0m
+[1;31mE (24036) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24036) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24036) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (24036) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (24146) MAIN: UNREACHABLE[0m
+[1;31mE (24146) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24146) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24146) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (24146) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (24256) MAIN: UNREACHABLE[0m
+[1;31mE (24256) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24256) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24256) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (24256) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (24366) MAIN: UNREACHABLE[0m
+[1;31mE (24366) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24366) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24366) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (24366) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (24476) MAIN: UNREACHABLE[0m
+[1;31mE (24476) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24476) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24476) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (24476) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (24586) MAIN: UNREACHABLE[0m
+[1;31mE (24586) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24586) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24586) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (24586) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (24696) MAIN: UNREACHABLE[0m
+[1;31mE (24696) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24696) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24696) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (24696) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (24806) MAIN: UNREACHABLE[0m
+[1;31mE (24806) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24806) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24806) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (24806) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (24916) MAIN: UNREACHABLE[0m
+[1;31mE (24916) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24916) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24916) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (24916) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (25026) MAIN: UNREACHABLE[0m
+[1;31mE (25026) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25026) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25026) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (25026) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (25136) MAIN: UNREACHABLE[0m
+[1;31mE (25136) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25136) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25136) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (25136) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (25246) MAIN: UNREACHABLE[0m
+[1;31mE (25246) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25246) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25246) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (25246) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (25356) MAIN: UNREACHABLE[0m
+[1;31mE (25356) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25356) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25356) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (25356) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (25466) MAIN: UNREACHABLE[0m
+[1;31mE (25466) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25466) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25466) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (25466) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (25576) MAIN: UNREACHABLE[0m
+[1;31mE (25576) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25576) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25576) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (25576) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (25686) MAIN: UNREACHABLE[0m
+[1;31mE (25686) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25686) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25686) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (25686) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (25796) MAIN: UNREACHABLE[0m
+[1;31mE (25796) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25796) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25796) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (25796) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (25906) MAIN: UNREACHABLE[0m
+[1;31mE (25906) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25906) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25906) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (25906) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (26016) MAIN: UNREACHABLE[0m
+[1;31mE (26016) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26016) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26016) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (26016) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (26126) MAIN: UNREACHABLE[0m
+[1;31mE (26126) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26126) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26126) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (26126) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (26236) MAIN: UNREACHABLE[0m
+[1;31mE (26236) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26236) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26236) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (26236) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (26346) MAIN: UNREACHABLE[0m
+[1;31mE (26346) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26346) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26346) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (26346) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (26456) MAIN: UNREACHABLE[0m
+[1;31mE (26456) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26456) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26456) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (26456) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (26566) MAIN: UNREACHABLE[0m
+[1;31mE (26566) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26566) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26566) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (26566) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (26676) MAIN: UNREACHABLE[0m
+[1;31mE (26676) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26676) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26676) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (26676) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (26786) MAIN: UNREACHABLE[0m
+[1;31mE (26786) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26786) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26786) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (26786) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (26896) MAIN: UNREACHABLE[0m
+[1;31mE (26896) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26896) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26896) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (26896) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (27006) MAIN: UNREACHABLE[0m
+[1;31mE (27006) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27006) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27006) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (27006) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (27116) MAIN: UNREACHABLE[0m
+[1;31mE (27116) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27116) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27116) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (27116) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (27226) MAIN: UNREACHABLE[0m
+[1;31mE (27226) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27226) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27226) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (27226) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (27336) MAIN: UNREACHABLE[0m
+[1;31mE (27336) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27336) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27336) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (27336) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (27446) MAIN: UNREACHABLE[0m
+[1;31mE (27446) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27446) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27446) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (27446) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (27556) MAIN: UNREACHABLE[0m
+[1;31mE (27556) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27556) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27556) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (27556) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (27666) MAIN: UNREACHABLE[0m
+[1;31mE (27666) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27666) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27666) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (27666) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (27776) MAIN: UNREACHABLE[0m
+[1;31mE (27776) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27776) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27776) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (27776) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (27886) MAIN: UNREACHABLE[0m
+[1;31mE (27886) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27886) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27886) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (27886) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (27996) MAIN: UNREACHABLE[0m
+[1;31mE (27996) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27996) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27996) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (27996) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (28106) MAIN: UNREACHABLE[0m
+[1;31mE (28106) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28106) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28106) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (28106) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (28216) MAIN: UNREACHABLE[0m
+[1;31mE (28216) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28216) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28216) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (28216) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (28326) MAIN: UNREACHABLE[0m
+[1;31mE (28326) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28326) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28326) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (28326) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (28436) MAIN: UNREACHABLE[0m
+[1;31mE (28436) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28436) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28436) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (28436) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (28546) MAIN: UNREACHABLE[0m
+[1;31mE (28546) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28546) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28546) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (28546) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (28656) MAIN: UNREACHABLE[0m
+[1;31mE (28656) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28656) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28656) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (28656) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (28766) MAIN: UNREACHABLE[0m
+[1;31mE (28766) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28766) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28766) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (28766) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (28876) MAIN: UNREACHABLE[0m
+[1;31mE (28876) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28876) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28876) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (28876) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (28986) MAIN: UNREACHABLE[0m
+[1;31mE (28986) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28986) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28986) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (28986) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (29096) MAIN: UNREACHABLE[0m
+[1;31mE (29096) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29096) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29096) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (29096) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (29206) MAIN: UNREACHABLE[0m
+[1;31mE (29206) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29206) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29206) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (29206) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (29316) MAIN: UNREACHABLE[0m
+[1;31mE (29316) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29316) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29316) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (29316) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (29426) MAIN: UNREACHABLE[0m
+[1;31mE (29426) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29426) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29426) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (29426) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (29536) MAIN: UNREACHABLE[0m
+[1;31mE (29536) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29536) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29536) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (29536) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (29646) MAIN: UNREACHABLE[0m
+[1;31mE (29646) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29646) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29646) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (29646) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (29756) MAIN: UNREACHABLE[0m
+[1;31mE (29756) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29756) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29756) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (29756) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (29866) MAIN: UNREACHABLE[0m
+[1;31mE (29866) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29866) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29866) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (29866) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (29976) MAIN: UNREACHABLE[0m
+[1;31mE (29976) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29976) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29976) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (29976) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (30086) MAIN: UNREACHABLE[0m
+[1;31mE (30086) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30086) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30086) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (30086) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (30196) MAIN: UNREACHABLE[0m
+[1;31mE (30196) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30196) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30196) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (30196) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (30306) MAIN: UNREACHABLE[0m
+[1;31mE (30306) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30306) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30306) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (30306) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (30416) MAIN: UNREACHABLE[0m
+[1;31mE (30416) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30416) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30416) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (30416) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (30526) MAIN: UNREACHABLE[0m
+[1;31mE (30526) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30526) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30526) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (30526) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (30636) MAIN: UNREACHABLE[0m
+[1;31mE (30636) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30636) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30636) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (30636) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (30746) MAIN: UNREACHABLE[0m
+[1;31mE (30746) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30746) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30746) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (30746) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (30856) MAIN: UNREACHABLE[0m
+[1;31mE (30856) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30856) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30856) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (30856) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (30966) MAIN: UNREACHABLE[0m
+[1;31mE (30966) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30966) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30966) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (30966) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (31076) MAIN: UNREACHABLE[0m
+[1;31mE (31076) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (31076) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (31076) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (31076) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (31186) MAIN: UNREACHABLE[0m
+[1;31mE (31186) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (31186) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (31186) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (31186) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (31296) MAIN: UNREACHABLE[0m
+[1;31mE (31296) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (31296) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (31296) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (31296) smart_car_controller: POST failed: ESP_ERR_HTTP_CONNECT[0m
