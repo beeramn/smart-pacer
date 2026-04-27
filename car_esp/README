@@ -1,0 +1,159 @@
+## car_esp
+- car esp script
+This firmware runs on the car-side ESP for the smart pacer RC car. It receives a target pace from the controller ESP over ESP-NOW, converts that pace into a speed setpoint, reads wheel encoder pulses, runs a PI speed controller, and outputs PWM to the motor driver. It also runs the line-following logic and servo steering.
+
+# Main Features
+- Receives pace commands over ESP-NOW.
+- Converts mile pace from minutes/seconds into meters per second.
+- Counts magnetic wheel encoder pulses using a GPIO interrupt.
+- Estimates vehicle speed from encoder counts.
+- Uses a filtered PI controller to regulate speed.
+- Applies ramp-up and ramp-down behavior to smooth acceleration and stopping.
+- Outputs PWM to the motor driver using the ESP32 LEDC peripheral.
+- Runs QTI sensor-based line following and servo steering.
+
+# Main Files
+- `car_esp.c`  
+  Main application file. Handles initialization, encoder GPIO setup, motor PWM setup, pace receiving, setpoint ramping, PI loop, motor output, and line following.
+
+- `speedcontroller.c`  
+  Implements the pace-to-speed conversion and PI speed controller.
+
+- `speedcontroller.h`  
+  Defines wheel geometry constants, encoder constants, the PI controller struct, and function prototypes.
+
+- `receiver.c` / `receiver.h`  
+  Handles ESP-NOW receiving and stores the latest received pace.
+
+- `line_following.c` / `linefollower.h`  
+  Handles QTI sensor reading and steering servo control.
+
+# Encoder Reading
+The wheel encoder signal is connected to GPIO 10 and configured with interrupts:
+.intr_type = GPIO_INTR_ANYEDGE
+
+Every detected edge triggers the ISR:
+```c
+static void IRAM_ATTR encoder_isr(void *arg) {
+    (void)arg;
+    s_encoder_count++;
+}
+```
+
+# Speed Calculation
+The wheel diameter is defined in `speedcontroller.h` as:
+#define SPEED_WHEEL_DIAMETER_M (0.115f)
+
+The wheel circumference is:
+circumference = pi * diameter
+
+With 8 encoder counts per wheel revolution, each encoder hit corresponds to:
+distance_per_count = wheel_circumference / 8
+
+The measured speed is calculated from:
+measured_speed = delta_distance / delta_time
+
+# Pace Conversion
+The controller ESP sends the target pace as:
+- `value1 = minutes`
+- `value2 = seconds`
+
+The car ESP converts this pace into meters per second using:
+speed = 1609.344 / total_seconds
+
+For example, an 8:00 mile becomes:
+1609.344 / 480 = 3.35 m/s
+
+# Setpoint Ramp
+Before the target speed enters the PI controller, it is passed through a ramp function. This prevents sudden jumps in target speed and reduces current spikes.
+
+The ramp function limits how quickly the target speed can increase or decrease:
+```c
+s_ramped_setpoint = ramp_setpoint(
+    target_setpoint,
+    s_ramped_setpoint,
+    rate_up,
+    rate_down,
+    dt
+);
+```
+Current example values:
+```c
+rate_up = 0.1f;    // m/s^2
+rate_down = 1.5f; // m/s^2
+```
+The ramped setpoint, not the raw target setpoint, is passed into the PI controller.
+
+# PI Controller
+The PI controller compares the ramped speed setpoint with the filtered measured speed:
+error = setpoint_m_s - filtered_measured_m_s
+
+The output is calculated using:
+output = kp * error + ki * integral
+
+Current gains: kp = 0.5f, ki = 0.05f
+
+The output is clamped to a maximum value for safety. In the current version, the maximum output is limited to 0.6, corresponding to approximately 60% motor command. Anti-windup logic prevents the integral term from continuing to grow when the controller output is saturated.
+
+# Speed Filtering
+The control loop runs every 20 ms, but the speed estimate is updated using a 100 ms estimator window. This reduces oscillations caused by sparse encoder pulses.
+
+Relevant constants:
+```c
+#define SPEED_ESTIMATOR_WINDOW_US   (100000)
+#define SPEED_FILTER_ALPHA          (0.25f)
+```
+
+The measured speed is low-pass filtered before being used by the PI controller.
+
+# Motor PWM Output
+The PI output is mapped to PWM duty cycle:
+uint32_t duty = (uint32_t)(cmd * MOTOR_PWM_DUTY_MAX);
+
+Then the duty cycle is applied using LEDC:
+
+```c
+ledc_set_duty(MOTOR_LEDC_MODE, MOTOR_LEDC_RPWM_CH, duty);
+ledc_update_duty(MOTOR_LEDC_MODE, MOTOR_LEDC_RPWM_CH);
+```
+
+The PWM output controls the motor driver input.
+
+# Line Following
+The car also reads an array of QTI sensors to follow a line. The line-following code calculates a weighted error based on which sensors detect the line, maps that error to a servo pulse width, and updates the steering servo.
+
+If no line is detected, the servo holds the last known pulse width.
+
+# Main Control Loop
+
+The main loop runs every 20 ms and performs the following steps:
+
+1. Check for the latest received pace.
+2. Convert the pace to a target speed in m/s.
+3. Ramp the target speed.
+4. Read encoder count and timestamp.
+5. Run the PI speed controller.
+6. Apply PI output to motor PWM.
+7. Read line sensors.
+8. Update steering servo.
+9. Delay until the next loop cycle.
+
+# Debugging Notes
+Useful log values:
+
+- `pi_out`: motor command from the PI controller.
+- `target_setpoint`: raw target speed from the received pace.
+- `s_ramped_setpoint`: smoothed target speed sent into the PI controller.
+- `measured_m_s`: filtered measured speed from encoder counts.
+- `enc`: cumulative encoder count.
+
+For clearer debugging, log both the target and ramped setpoint:
+```
+ESP_LOGI(TAG,
+    "out=%.4f | target=%.3f | ramped=%.3f | meas=%.3f | enc=%ld",
+    (double)pi_out,
+    (double)target_setpoint,
+    (double)s_ramped_setpoint,
+    (double)measured_m_s,
+    (long)enc);
+```
