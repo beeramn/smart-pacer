@@ -21,22 +21,6 @@ Key components:
 - IoT data logging via HTTP POST to a cloud backend (proof of concept)
 - Real-time operation using ESP-IDF and FreeRTOS
 
-## System Architecture
-
-QTI Sensors -> Error Calculation -> Steering Control (Servo PWM)
-                              |
-                              v
-                    Speed Control (PI + Encoder)
-                              |
-                              v
-                        Motor Driver
-                              |
-                              v
-                          Car Motion
-                              |
-                              v
-        (Optional) HTTP POST -> Flask Server -> PostgreSQL
-
 ## Hardware Components
 
 - ESP32-S3 microcontroller
@@ -125,7 +109,3 @@ idf.py -p <PORT> flash monitor
 - Flaviana Keller
 - Brandon Ramirez
 - Neyla Kirby
-
-## License
-
-This project is for educational purposes. Add a license if distributing publicly.
