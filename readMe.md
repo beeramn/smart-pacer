@@ -1,6 +1,6 @@
 # Smart Pace-Setter Line Following Car
 
-An embedded systems project that implements a closed-loop, line-following RC car designed to maintain a consistent pace along a track. The system integrates real-time sensing, control algorithms, and optional cloud-based data logging.
+An IoT project that implements a closed-loop, line-following RC car designed to maintain a consistent pace along a track. The system integrates real-time sensing, control algorithms, and optional cloud-based data logging.
 
 ## Overview
 
@@ -29,7 +29,7 @@ Key components:
 - BTS7960 motor driver
 - Steering servo motor
 - Wheel encoder
-- Battery and 3.3V regulator
+- Battery and buck coverter
 
 ## Software Stack
 
@@ -44,42 +44,6 @@ Backend:
 - Python Flask server
 - PostgreSQL database
 - psycopg2
-
-## Control Algorithm
-
-Line Following:
-Each QTI sensor is assigned a positional weight:
-[-350, -250, -150, -50, +50, +150, +250, +350]
-
-Error is computed as the weighted sum of active sensors:
-- Negative error -> steer left
-- Positive error -> steer right
-
-Steering Smoothing:
-pulseUs = (3 * (int)lastPulseUs + pulseUs) / 4;
-
-This acts as a low-pass filter to smooth control signals.
-
-Speed Control:
-- PI controller uses encoder feedback to maintain target velocity
-- Motor input is adjusted based on speed error
-
-## Data Logging (Optional)
-
-ESP32 sends JSON via HTTP POST:
-{
-  "start_time": "...",
-  "end_time": "...",
-  "pace": "..."
-}
-
-Flask endpoint:
-POST /sensor
-
-Database fields:
-- start_time
-- end_time
-- pace
 
 ## Challenges
 
