@@ -1,38 +1,131 @@
-# How To Run 
-- you might want to set up ur environment variables (MAC) `. ~/esp/esp-idf/export.sh`
-- just like any other ESP project, cd into the main folder of either the esp for the car(receiver) or the controller (sender)
-- `idf.py build`
-- (MAC) Cmd + C: `ls /dev/cu.usb*` -> Output is the [PORT] 
-- `idf.py -p [PORT] flash` Flashes code
-- `idf.py -p [PORT] monitor` Monitor ESP output
+# Smart Pace-Setter Line Following Car
 
-## Functionality
-- Right now when you have 2 ESPs connected and use the UO to set a pace and select [Start], it will send the selected pace to the receiver. 
-- The receiver (Car ESP) just listens and sends an OK acknowledgment to transmiter
-- once transmiter has receivev 3 of these, it stops sendings
+An embedded systems project that implements a closed-loop, line-following RC car designed to maintain a consistent pace along a track. The system integrates real-time sensing, control algorithms, and optional cloud-based data logging.
 
-## car_esp
-- car esp script
-(Noiluh) ESP MAC: 24:EC:4A:52:C3:64
+## Overview
 
-## cont_esp
-- controller esp script 
-(Brandon) ESP Mac: 74:4D:BD:2E:08:24
+The Smart Pace-Setter Car follows a predefined track using a reflectance sensor array while maintaining a steady speed. Unlike traditional line-following robots, this system emphasizes consistent pacing, making it suitable for applications such as athletic training or rehabilitation.
 
-## shared_components
-- shared transmiter(controller esp sends message to car), receiver(car esp), and mac-reading scrips( prints the address of ESP {NEED FOR ESP NOW}).
+Key components:
+- Embedded systems (ESP32)
+- Real-time control (PI controller and steering control)
+- Sensor processing (QTI array)
+- Networking (HTTP and cloud backend)
 
-## How to add shared functions
-- if they're to be shared by both ESPs, put the `func.c` file in `/shared_components` and the corresponding `func.h` file in `/include`
-- add the `func.c` file to the `CMakeLists.txt` in `shared_components` along the other files
-- when using in ESP folders remmeber to add `#include` to the top of the file. EX: `#include "get_mac.h"` 
+## Features
 
+- Line following using an 8-sensor QTI array with weighted error calculation
+- Closed-loop steering control using PWM-controlled servo
+- Steering smoothing to reduce jitter
+- Speed regulation using PI control with encoder feedback
+- IoT data logging via HTTP POST to a cloud backend (proof of concept)
+- Real-time operation using ESP-IDF and FreeRTOS
 
-### transmiter.c 
-- has all the transmitting functions, At the moment will keep transmitting until it receives 3 OK messages from receiver
+## System Architecture
 
-### receiver.c
-- RIGHT NOW: Only listens for messages and sends OK back to transmiter when it gets something
+QTI Sensors -> Error Calculation -> Steering Control (Servo PWM)
+                              |
+                              v
+                    Speed Control (PI + Encoder)
+                              |
+                              v
+                        Motor Driver
+                              |
+                              v
+                          Car Motion
+                              |
+                              v
+        (Optional) HTTP POST -> Flask Server -> PostgreSQL
 
-### ui.c
-- has (mostly) all the functions from flavi's original script. Used in cont_esp.c to create the interface and send pace to receiver
+## Hardware Components
+
+- ESP32-S3 microcontroller
+- Parallax 8-QTI sensor array
+- RS-550 DC motor
+- BTS7960 motor driver
+- Steering servo motor
+- Wheel encoder
+- Battery and 3.3V regulator
+
+## Software Stack
+
+Embedded:
+- ESP-IDF (v5.x)
+- FreeRTOS
+- esp_http_client
+- LEDC (PWM control)
+- LVGL (optional UI)
+
+Backend:
+- Python Flask server
+- PostgreSQL database
+- psycopg2
+
+## Control Algorithm
+
+Line Following:
+Each QTI sensor is assigned a positional weight:
+[-350, -250, -150, -50, +50, +150, +250, +350]
+
+Error is computed as the weighted sum of active sensors:
+- Negative error -> steer left
+- Positive error -> steer right
+
+Steering Smoothing:
+pulseUs = (3 * (int)lastPulseUs + pulseUs) / 4;
+
+This acts as a low-pass filter to smooth control signals.
+
+Speed Control:
+- PI controller uses encoder feedback to maintain target velocity
+- Motor input is adjusted based on speed error
+
+## Data Logging (Optional)
+
+ESP32 sends JSON via HTTP POST:
+{
+  "start_time": "...",
+  "end_time": "...",
+  "pace": "..."
+}
+
+Flask endpoint:
+POST /sensor
+
+Database fields:
+- start_time
+- end_time
+- pace
+
+## Challenges
+
+- Sensor calibration due to sensitivity to lighting conditions
+- High current draw from RS-550 motor
+- Integration of sensing, control, and networking
+- Mechanical limitations of the RC platform
+
+## Future Work
+
+- Replace QTI sensors with camera-based vision
+- Improve robustness to lighting variation
+- Develop wearable IMU-based pacing system
+- Add data visualization and analytics
+- Improve motor control and power efficiency
+
+## Getting Started
+
+Build:
+idf.py build
+
+Flash:
+idf.py -p <PORT> flash monitor
+
+## Contributors
+
+- Flaviana Keller
+- Brandon Ramirez
+- Neyla Kirby
+
+## License
+
+This project is for educational purposes. Add a license if distributing publicly.
